@@ -1,359 +1,787 @@
 console.log("Hello World");
 /* ============================================================
-   JS CLASS — ONE-FILE WORKBOOK
+   LESSON 1 â€” VARIABLES: FRESH EXERCISES
    ------------------------------------------------------------
+   Tools allowed: const / let, reassignment, + - * / , and
+   joining strings with + . Nothing else yet.
+
    How to use:
-   - Each exercise is written as a comment (lines starting with //).
-   - Write your JavaScript in the blank space under each one.
-   - Use console.log(...) to print your answer.
-   - Run this file with Node:   node workbook.js
-     (or paste one exercise at a time into a lesson's Run box.)
+   - Write your function where you see  // your code here
+   - The test call sits below it, COMMENTED OUT. Delete the
+     leading "// " to switch it on, then run:  node 1-variables.js
+   - Each exercise has 3 TEST CASES: INPUT -> the EXACT value
+     you must RETURN. All 3 match = correct.
 
-   Sections:
-     PART 1 — IF STATEMENTS        (1–10)
-     PART 2 — COMBINED PROJECT     (1–20)
-     PART 3 — STRINGS + INTERVIEW  (1–25)
+   Every function has a DIFFERENT name, so all answers live here.
    ============================================================ */
 
+// ----- 1. Running total -----
+// Write `runningTotal()` (no input). Start let sum = 0, add 8, add 8,
+// subtract 1, then RETURN sum.
+// your code here
+function runningTotal(){
+let sum = 0;
+sum +=8;
+sum +=8;
+sum -=1;
+return sum;
+}
+console.log(runningTotal())
+console.log(runningTotal()+5)
+console.log(runningTotal()*2)
+// console.log(runningTotal());
+// TEST 1:  runningTotal()      ->  15
+// TEST 2:  runningTotal() + 5  ->  20
+// TEST 3:  runningTotal() * 2  ->  30
+
+// ----- 2. Swap into a label -----
+// Write `swapLabel(a, b)` that RETURNS b + "-" + a (the two joined,
+// swapped, with a dash between).
+// your code here
+function swapLabel(a, b){
+return (b + "-" + a)
+}
+console.log(swapLabel("left", "right"))
+console.log(swapLabel("1", "2"))
+console.log(swapLabel("a", "b"))
+// console.log(swapLabel("left", "right"));
+// TEST 1:  swapLabel("left", "right")  ->  "right-left"
+// TEST 2:  swapLabel("1", "2")         ->  "2-1"
+// TEST 3:  swapLabel("a", "b")         ->  "b-a"
+
+// ----- 3. Triple then bump -----
+// Write `tripleBump(n)`. Set let x = n * 3, then add 1 to x, then RETURN x.
+// your code here
+function tripleBump(n){
+let x = n;
+x *= 3;
+x += 1;
+return x;
+}
+console.log(tripleBump(4))
+console.log(tripleBump(0))
+console.log(tripleBump(10))
+// console.log(tripleBump(4));
+// TEST 1:  tripleBump(4)   ->  13
+// TEST 2:  tripleBump(0)   ->  1
+// TEST 3:  tripleBump(10)  ->  31
+
+// ----- 4. Full name -----
+// Write `fullName(first, last)` that RETURNS the two joined with one space.
+// your code here
+function fullName(first, last){
+return first + " " + last;
+}
+console.log(fullName("Ada", "Lovelace"))
+// console.log(fullName("Ada", "Lovelace"));
+// TEST 1:  fullName("Ada", "Lovelace")  ->  "Ada Lovelace"
+// TEST 2:  fullName("Sam", "Lee")       ->  "Sam Lee"
+// TEST 3:  fullName("A", "B")           ->  "A B"
+
+// ----- 5. Price with tax -----
+// Write `withTax(price)`. Use const TAX = 0.1, then RETURN price plus
+// price * TAX.
+// your code here
+function withTax(price){
+const TAX = 0.1;
+return price + price * TAX;
+}
+console.log(withTax(100))
+// console.log(withTax(100));
+// TEST 1:  withTax(100)  ->  110
+// TEST 2:  withTax(50)   ->  55
+// TEST 3:  withTax(0)    ->  0
+
+// ----- 6. Count up by one, three times -----
+// Write `countUp3(start)`. Set let c = start, then c++ three times, RETURN c.
+// your code here
+function countUp3(start){
+let c = start;
+c++;
+c++;
+c++;
+return c
+}
+console.log(countUp3(7))
+console.log(countUp3(0))
+// console.log(countUp3(7));
+// TEST 1:  countUp3(7)   ->  10
+// TEST 2:  countUp3(0)   ->  3
+// TEST 3:  countUp3(-3)  ->  0
+
+// ----- 7. Average of two -----
+// Write `avgTwo(a, b)` that RETURNS the average of a and b.
+// your code here
+function avgTwo(a, b){
+const total = a + b;
+const average = total / 2;
+return average;
+}
+console.log(avgTwo(4, 8));
+console.log(avgTwo(10, 20));
+console.log(avgTwo(3, 3));
+// console.log(avgTwo(4, 8));
+// TEST 1:  avgTwo(4, 8)    ->  6
+// TEST 2:  avgTwo(10, 20)  ->  15
+// TEST 3:  avgTwo(3, 3)    ->  3
+
+// ----- 8. Rectangle area then double -----
+// Write `doubleArea(w, h)`. Set let area = w * h, then reassign
+// area = area * 2, RETURN area.
+// your code here
+function doubleArea(w, h){
+let area = w * h;
+area *= 2;
+return area;
+}
+console.log(doubleArea(3, 4))
+console.log(doubleArea(5, 2))
+console.log(doubleArea(1, 1))
+// console.log(doubleArea(3, 4));
+// TEST 1:  doubleArea(3, 4)  ->  24
+// TEST 2:  doubleArea(5, 2)  ->  20
+// TEST 3:  doubleArea(1, 1)  ->  2
 /* ============================================================
-   PART 1 — IF STATEMENTS
-   ============================================================ */
-
-// ----- 1. Simple if -----
-// Declare `let age = 16`. Write an if that logs "You can drive" when age >= 16.
-let age = 16;
-if (age >= 16) {
-  console.log("You can drive");
-} else {
-  console.log("Can't drive");
-}
-// ----- 2. if / else -----
-// Declare `let isWeekend = true`. Log "Relax!" if it is the weekend, otherwise "Go to work".
-let isWeekend = true;
-if ((isWeekend = true)) {
-  console.log("Relax");
-} else {
-  console.log("Go to work");
-}
-// ----- 3. Even or odd -----
-// Declare `let number = 7`. Use if/else and `number % 2 === 0` to log "even" or "odd".
-let number = 7;
-if (number % 2 === 0) {
-  console.log("even");
-} else {
-  console.log("odd");
-}
-// ----- 4. Grade the score -----
-// Declare `let score = 82`. Log the letter grade:
-//   90+ -> "A", 80–89 -> "B", 70–79 -> "C", below 70 -> "F".
-let score = 82;
-if (score >= 90) {
-  console.log("A");
-} else if (score >= 80 && score <= 89) {
-  console.log("B");
-} else if ((score) => 70 && score <= c79) {
-  console.log("C");
-} else {
-  console.log("F");
-}
-// ----- 5. Biggest of two -----
-// Declare `let a = 14` and `let b = 9`. Log whichever is larger, or "equal" if they match.
-let a = 14;
-let b = 9;
-if (a > b) {
-  console.log("a");
-} else if (b > A) {
-  console.log(b);
-} else {
-  console.log("equal");
-}
-// ----- 6. Temperature advice -----
-// Declare `let temp = 30`. Log:
-//   above 28 -> "Wear shorts", 15 to 28 -> "Wear a jacket", below 15 -> "Wear a coat".
-let temp = 30;
-if (temp > 28) {
-  console.log("Wear shorts");
-} else if (temp >= 15 && temp >= 28) {
-  console.log("Wear a jacket");
-} else {
-  console.log("Wear a coat");
-}
-// ----- 7. Login message -----
-// Declare `let username = "admin"` and `let password = "1234"`.
-// If both are correct, log "Welcome", otherwise "Access denied".
-let username = "admin";
-let password = "1234";
-if (username === "admin" && password === "1234") {
-  console.log("Welcome");
-} else {
-  console.log("Access denied");
-}
-// ----- 8. Positive, negative, zero -----
-// Declare `let n = -5`. Log "positive", "negative", or "zero".
-let n = -5;
-if (n > 0) {
-  console.log("positive");
-} else if (n < 0) {
-  console.log("negative");
-} else {
-  console.log("zero");
-}
-// ----- 9. Ticket price -----
-// Declare `let age = 65`. Price: under 12 -> "$5", 12 to 64 -> "$12", 65+ -> "$8".
-let nas = 65;
-if (nas < 12) {
-  console.log("Price = $5");
-} else if (nas >= 12 && nas <= 64) {
-  console.log("Price is $12");
-} else {
-  console.log("Price = $8");
-}
-// ----- 10. Traffic light -----
-// Declare `let light = "yellow"`. Log:
-//   "green" -> "Go", "yellow" -> "Slow down", "red" -> "Stop", else -> "Invalid light".
-let light = "yellow";
-if ((light === "green")) {
-  console.log("Go");
-} else if ((light === "yellow")) {
-  console.log("Slow down");
-} else {
-  console.log("Invalid light");
-}
-
-/* ============================================================
-   PART 2 — COMBINED PROJECT (variables + operators + if)
-   ============================================================ */
-
-// ----- 1. Movie ticket machine -----
-// Variables: age, hasMembership (boolean).
-//   under 12 OR over 65 -> "$6", member of any age -> "$8", everyone else -> "$12". Log the price.
-let movieAge = 32
-let hasMembership = false
-if(hasMembership === true){console.log("price = $8");}
-else if(movieAge <= 12 || movieAge >= 65 ){console.log("price = $6");}
-else{console.log("price = $12")}
-// ----- 2. Password strength -----
-// Variable: password (string). Using password.length:
-//   >= 12 -> "Strong", >= 8 -> "Medium", otherwise -> "Weak".
-let userPassword = "95058005niceguy"
-if(userPassword.length >= 12){console.log("Strong")}
-else if(userPassword.leng >= 8){console.log("Medium")}
-else {console.log("Weak")}
-// ----- 3. Game level up -----
-// let xp = 250, const levelUpAt = 200. If xp >= levelUpAt, log "Level up!" and reset xp to 0;
-// otherwise log how much XP is left. Show xp before and after.
-let xp = 100
-const levelUpAt = 200
-console.log("Before: " + xp + " XP")
-if(xp >= levelUpAt){console.log("Level up!"); xp = 0;}
-else{console.log("You need" +(levelUpAt - xp ) + " more XP ");}
-console.log("After:" + xp + " XP ")
-
-// ----- 4. Tip calculator -----
-// Variables: bill, serviceWasGood (boolean). Good -> 20% tip, otherwise 10%.
-// Compute the tip and the total, log both.
-let bill = 100
-const serviceWasGood = true
-if(serviceWasGood == true){console.log(bill + bill * 0.2);}
-else {console.log(bill * 0.1 + bill)}
-// ----- 5. Weather outfit -----
-// Variables: temp, isRaining (boolean).
-//   raining AND temp < 15 -> "Coat and umbrella", raining only -> "Umbrella",
-//   temp > 28 -> "T-shirt", otherwise -> "Light jacket".
-let tempR = 25
-const isRaining = false
-if(isRaining && tempR < 15){console.log("Coat and umberella");}
-else if (isRaining){console.log("Umbrella");}
-else if (tempR > 28){console.log("T-shirt");}
-else {console.log("Light jacket")}
-
-// ----- 6. Exam pass with bonus -----
-// Variables: score, attendedExtraClass (boolean).
-// Pass if score >= 50, OR if score >= 45 AND attended the extra class. Log "Pass" or "Fail".
-let score6 = 100
-const attendedExtraClass = false
-if (score6 >= 50 || (score6 >= 45 && attendedExtraClass)){console.log("Pass");}
-else {console.log("Fail")}
-// ----- 7. Cart discount -----
-// Variables: total, isMember (boolean).
-//   total >= 100 AND member -> 20% off, total >= 100 only -> 10% off, otherwise -> no discount.
-// Log the final price.
-let total = 200
-const isMember = true
-if( total >= 100 && isMember === true){console.log(total * 0.8);}
-else if(total == 100 && isMember === true){console.log(total * 0.9);}
-else {console.log("total")}
-
-// ----- 8. Login system -----
-// Variables: const correctUser, const correctPass, plus enteredUser, enteredPass, isLocked (boolean).
-// Log "Welcome" only when NOT locked AND both username and password match. Otherwise "Login failed".
-const correctUser = Naba
-const correctPass = Nabaa0227
-const enteredUser = Baagii
-const enteredPass = Baagii0227
-const isLocked = true
-
-
-// ----- 9. BMI category -----
-// Variables: weight (kg), height (m). bmi = weight / (height * height). Log:
-//   below 18.5 -> "Underweight", 18.5–24.9 -> "Normal", 25–29.9 -> "Overweight", 30+ -> "Obese".
-
-// ----- 10. Mini ATM -----
-// let balance = 500, let withdrawAmount = 200, const dailyLimit = 300.
-// Allow only when withdrawAmount <= balance AND withdrawAmount <= dailyLimit.
-//   allowed -> subtract from balance, log "Success" + new balance;
-//   too much -> "Insufficient funds"; over limit -> "Over daily limit".
-
-// ----- 11. Leap year check -----
-// Variable: year. Leap when divisible by 4 AND (not divisible by 100 OR divisible by 400).
-// Use % with && and ||. Log "Leap year" or "Normal year". Test with 2000, 1900, 2024.
-
-// ----- 12. FizzBuzz (one number) -----
-// Variable: n. divisible by 3 AND 5 -> "FizzBuzz", by 3 only -> "Fizz", by 5 only -> "Buzz",
-// otherwise -> the number itself. Test with 15, 9, 10, 7.
-
-// ----- 13. Rock paper scissors -----
-// Variables: player1, player2 (strings: "rock", "paper", "scissors").
-// Log "Player 1 wins", "Player 2 wins", or "Tie". rock>scissors, scissors>paper, paper>rock.
-
-// ----- 14. Triangle type -----
-// Variables: sides a, b, c. First check valid triangle (each side < sum of other two).
-// invalid -> "Not a triangle"; all equal -> "Equilateral"; exactly two equal -> "Isosceles";
-// all different -> "Scalene".
-
-// ----- 15. 12-hour clock -----
-// Variable: hour (0–23). Convert to 12-hour and log like "3 PM".
-//   0 -> "12 AM", 12 -> "12 PM", 1–11 -> "AM", 13–23 -> subtract 12 and add "PM".
-// Test with 0, 9, 12, 18.
-
-// ----- 16. Shipping cost -----
-// Variables: weight (kg), isExpress (boolean), isMember (boolean).
-// Base: weight <= 1 -> $5, weight <= 5 -> $10, otherwise -> $20.
-// If isExpress, double base. Then if isMember, take $3 off (never below $0). Log final cost.
-
-// ----- 17. Progressive tax -----
-// Variable: income. first $10,000 -> 0%, $10,001–$30,000 -> 10% on that portion,
-// above $30,000 -> 20% on that portion. Log total tax. Test with 5000, 20000, 50000.
-
-// ----- 18. Password validator -----
-// Variables: password (string), confirmPassword (string). Log "Valid" only when ALL true:
-//   length >= 8, NOT equal to "password", AND matches confirmPassword.
-// Otherwise a specific reason: "Too short", "Too common", or "Does not match" (in that order).
-
-// ----- 19. Concert pricing -----
-// Variables: age, day (string), hasVipCode (boolean). Start price $50.
-//   under 18 OR 65+ -> half price; day is "Tuesday" -> $10 off (after age discount);
-//   hasVipCode -> add flat $30 at the end. Log the final price.
-
-// ----- 20. Vending machine -----
-// const price = 150 (cents), insertedAmount (cents), isSoldOut (boolean). In order:
-//   isSoldOut -> "Sold out" and stop; insertedAmount < price -> log how much more is needed;
-//   exact -> "Enjoy your drink!"; too much -> "Enjoy your drink!" AND change (insertedAmount - price).
-
-/* ============================================================
-   PART 3 — STRINGS + INTERVIEW ROUND
+   LESSON 2 â€” DATA TYPES: FRESH EXERCISES
    ------------------------------------------------------------
-   Tools: .length .toUpperCase() .toLowerCase() text[i] .charAt()
-          .includes() .indexOf() .slice() .substring() .trim() + (join)
-   Convert: String(n)  Number(s)  (n).toString()  "" + n  isNaN(Number(x))
+   Tools: typeof, Number(), String(), Boolean(), + - * / ,
+   and the types number / string / boolean / undefined.
+
+   Run:  node 2-data-types.js
+   Switch on a test by deleting its leading "// ".
+   Each exercise: 3 TEST CASES, INPUT -> EXACT RETURN value.
    ============================================================ */
 
-// ----- 1. How long is the word? -----
-// word (string). Log word.length. if longer than 5 -> "Long word", else "Short word".
-// Test "sun" and "elephant".
+// ----- 1. What type is it? -----
+// Write `whatType(value)` that RETURNS the typeof string of value.
+// your code here
+function whatType(value){
+return typeof value;
+}
+console.log(whatType(42));
+console.log(whatType("hi"))
+console.log(whatType(true))
+// console.log(whatType(42));
+// TEST 1:  whatType(42)      ->  "number"
+// TEST 2:  whatType("hi")    ->  "string"
+// TEST 3:  whatType(true)    ->  "boolean"
 
-// ----- 2. Loud and quiet -----
-// name (string). Log it with .toUpperCase() and with .toLowerCase().
+// ----- 2. String to number -----
+// Write `toNumber(text)` that RETURNS text turned into a real number.
+// your code here
+function toNumber(text){
+return Number(text);
+}
+console.log(toNumber("42"))
+console.log(toNumber("7")+1)
+console.log(toNumber("100")*2)
+// console.log(toNumber("42"));
+// TEST 1:  toNumber("42")        ->  42
+// TEST 2:  toNumber("7") + 1     ->  8
+// TEST 3:  toNumber("100") * 2   ->  200
 
-// ----- 3. First and last letter -----
-// word (string). Log word[0] and word[word.length - 1]. Test "hello" -> h and o.
+// ----- 3. Number to string -----
+// Write `toText(n)` that RETURNS n turned into a string.
+// your code here
+function toText(n){
+return String(n);
+}
+console.log(toText(42));
+console.log(typeof toText(5));
+console.log(toText(9) + " ! ");
+// console.log(toText(42));
+// TEST 1:  toText(42)            ->  "42"
+// TEST 2:  typeof toText(5)      ->  "string"
+// TEST 3:  toText(9) + "!"       ->  "9!"
 
-// ----- 4. Cut a piece (slice) -----
-// word = "JavaScript". Log word.slice(0, 4) and word.slice(4).
+// ----- 4. The string-plus-number trap -----
+// Write `mix(a, b)` where a is a number and b is a string. RETURN a + b.
+// (Find out what JS does when you add a number to a string.)
+// your code here
+function mix(a, b){
+return a + "" + b
+}
+console.log(mix(5, "5"))
+console.log(mix(1, "0"))
+console.log(typeof mix(2, "x"))
+// console.log(mix(5, "5"));
+// TEST 1:  mix(5, "5")       ->  "55"
+// TEST 2:  mix(1, "0")       ->  "10"
+// TEST 3:  typeof mix(2, "x") ->  "string"
 
-// ----- 5. Is it an email? -----
-// email (string). if email.includes("@") -> "Looks like an email", else "Not an email".
-// Test "sam@mail.com" and "sam.com".
+// ----- 5. Is it a real number? -----
+// Write `isRealNumber(text)` that RETURNS true if Number(text) is a valid
+// number, false if it is NaN.
+// your code here
+function isRealNumber(text){
+const hoosonz = Number(text);
+if(isNaN(hoosonz)){return false;}
+else{return true;}
+}
+console.log(isRealNumber("42"))
+console.log(isRealNumber("hello"))
+console.log(isRealNumber("3.14"))
+// console.log(isRealNumber("42"));
+// TEST 1:  isRealNumber("42")    ->  true
+// TEST 2:  isRealNumber("hello") ->  false
+// TEST 3:  isRealNumber("3.14")  ->  true
 
-// ----- 6. Full name builder -----
-// firstName, lastName (strings). Join with a space using + into fullName.
-// Log fullName and fullName.length.
+// ----- 6. Force a boolean -----
+// Write `asBoolean(value)` that RETURNS value turned into a true/false
+// with Boolean(value).
+// your code here
+function asBoolean(value){
+return Boolean(value);
+}
+console.log(asBoolean(0))
+console.log(asBoolean(1))
+console.log(asBoolean(""))
+// console.log(asBoolean(0));
+// TEST 1:  asBoolean(0)    ->  false
+// TEST 2:  asBoolean(1)    ->  true
+// TEST 3:  asBoolean("")   ->  false
 
-// ----- 7. Valid username -----
-// username (string). Valid only when length >= 3 AND <= 15.
-// Log "Valid username" or "Invalid username".
+// ----- 7. Undefined check -----
+// Write `isMissing(value)` that RETURNS true when value is undefined.
+// your code here
+function isMissing(value){
+if(value === undefined) {return true;}
+else {return false;}
+}
+console.log(isMissing(undefined))
+console.log(isMissing(0))
+console.log(isMissing("x"))
+// console.log(isMissing(undefined));
+// TEST 1:  isMissing(undefined)  ->  true
+// TEST 2:  isMissing(0)          ->  false
+// TEST 3:  isMissing("x")        ->  false
 
-// ----- 8. Same word? (ignore case) -----
-// a, b (strings). if a.toLowerCase() === b.toLowerCase() -> "Match", else "No match".
-// Test "Hello" and "hello".
+// ----- 8. Round-trip a digit -----
+// Write `firstDigitType(n)`. Turn n into a string, take its first
+// character, RETURN the typeof that character.
+// your code here
+function firstDigitType(n){
+const str = String(n);
+const firstChar = str[0];
+return typeof firstChar;
+}
+console.log(firstDigitType(42));
+console.log(firstDigitType(7));
+console.log(firstDigitType(900));
 
-// ----- 9. Clean the spaces (trim) -----
-// raw = "   hi there   ". clean = raw.trim(). Log clean and clean.length. Compare to raw.length.
 
-// ----- 10. Find a letter (indexOf) -----
-// word (string). word.indexOf("a"). if -1 -> "No letter a", else "Found a at position " + ...
-// Test "banana" and "sky".
-
-// ----- 11. Phone area code -----
-// phone (10-char string like "5551234567"). Log "Area code: " + phone.slice(0, 3).
-// if phone.length is not exactly 10 -> "Invalid number".
-
-// ----- 12. Password rule (length + word) -----
-// password (string). "Strong" only when length >= 8 AND NOT contains "password"
-// (!password.toLowerCase().includes("password")). Otherwise "Weak".
-
-// ----- 13. Initials -----
-// firstName, lastName (strings). first letters uppercase, join with + and dots -> "M.J.".
-// "maria" + "jones" -> "M.J.".
-
-// ----- 14. Capitalize a name -----
-// name = "maria". Join name[0].toUpperCase() with name.slice(1) -> "Maria".
-
-// ----- 15. Tiny palindrome check -----
-// word (3-letter string like "mom"). Reverse with word[2]+word[1]+word[0], compare with ===.
-// Log "Palindrome" or "Not a palindrome". Test "mom" and "cat".
-
-// --- Interview round: Numbers <-> Strings ---
-
-// ----- 16. Count the digits -----
-// n (number). String(n).length. if more than 3 digits -> "Big number", else "Small number".
-// Test 42 and 10000.
-
-// ----- 17. Sum the two digits -----
-// n (2-digit number like 47). s = String(n). Number(s[0]) + Number(s[1]). Log the sum.
-// if sum is exactly 10 -> "Round". Test 47 and 55.
-
-// ----- 18. First and last digit -----
-// n (3-digit number). s = String(n). Log Number(s[0]) and Number(s[s.length - 1]).
-// if equal -> "Same ends". Test 363 and 481.
-
-// ----- 19. Reverse a 3-digit number -----
-// n (3-digit number). s = String(n). reversed = Number(s[2] + s[1] + s[0]). Log it.
-// Test 123 -> 321.
-
-// ----- 20. Palindrome number -----
-// n (3-digit number). Build reversed like #19, compare to n with ===.
-// Log "Palindrome" or "Not a palindrome". Test 121 and 123.
-
-// ----- 21. Contains a lucky 7? -----
-// n (number). if String(n).includes("7") -> "Lucky!", else "No luck". Test 1700 and 2024.
-
-// ----- 22. Glue two numbers -----
-// a = 12, b = 34. Number(String(a) + String(b)) -> 1234. Log it, then log typeof the result.
-
-// ----- 23. Pad the clock -----
-// minute (0–59). if String(minute).length === 1 add "0" in front. Log like "05" or "42".
-// Test 5 and 42.
-
-// ----- 24. Cents to price tag -----
-// cents (3+ digit number like 150). s = String(cents).
-// rest = s.slice(s.length - 2); dollars = s.slice(0, s.length - 2).
-// Log "$" + dollars + "." + rest -> "$1.50". Test 150 and 905.
-
-// ----- 25. Is this string a number? -----
-// input (string like "42" or "hello"). if isNaN(Number(input)) -> "Invalid input";
-// otherwise turn it into a number, double it, log the result. Test "21" and "abc".
-
+// console.log(firstDigitType(42));
+// TEST 1:  firstDigitType(42)   ->  "string"
+// TEST 2:  firstDigitType(7)    ->  "string"
+// TEST 3:  firstDigitType(900)  ->  "string"
 /* ============================================================
-   End of workbook. Nice work!
+   LESSON 3 â€” OPERATORS: FRESH EXERCISES
+   ------------------------------------------------------------
+   Tools: < > <= >= === !== , && || ! , % , + - * / .
+   Every answer RETURNS a value (often true/false). No if needed.
+
+   Run:  node 3-operators.js
+   Each exercise: 3 TEST CASES, INPUT -> EXACT RETURN value.
    ============================================================ */
+
+// ----- 1. Is it bigger? -----
+// Write `isBigger(a, b)` that RETURNS true when a is greater than b.
+// your code here
+function isBigger(a, b){
+if (a > b){return true;}
+else {return false;}
+}
+console.log(isBigger(10, 3));
+console.log(isBigger(3, 10));
+console.log(isBigger(5, 5));
+// console.log(isBigger(10, 3));
+// TEST 1:  isBigger(10, 3)  ->  true
+// TEST 2:  isBigger(3, 10)  ->  false
+// TEST 3:  isBigger(5, 5)   ->  false
+
+// ----- 2. Exactly equal -----
+// Write `sameValueAndType(a, b)` that RETURNS true only when a === b.
+// your code here
+function sameValueAndType(a, b){
+if (a === b){return true;}
+else {return false;}
+}
+console.log(sameValueAndType(5, 5));
+console.log(sameValueAndType(5, "5"));
+console.log(sameValueAndType("a", "a"));
+// console.log(sameValueAndType(5, 5));
+// TEST 1:  sameValueAndType(5, 5)     ->  true
+// TEST 2:  sameValueAndType(5, "5")   ->  false
+// TEST 3:  sameValueAndType("a", "a") ->  true
+
+// ----- 3. In working hours -----
+// Write `isWorkHour(hour)` that RETURNS true when hour is >= 9 AND < 17.
+// your code here
+function isWorkHour(hour){
+if (hour >= 9 && hour < 17){return true;}
+else {return false}
+}
+console.log(isWorkHour(10));
+console.log(isWorkHour(17));
+console.log(isWorkHour(8));
+// console.log(isWorkHour(10));
+// TEST 1:  isWorkHour(10)  ->  true
+// TEST 2:  isWorkHour(17)  ->  false
+// TEST 3:  isWorkHour(8)   ->  false
+
+// ----- 4. Weekend day -----
+// Write `isWeekend(day)` that RETURNS true when day is "Sat" OR "Sun".
+// your code here
+function isWeekend(day){
+if (day === "Sat" || day === "Sun"){return true;}
+else {return false;}
+}
+console.log(isWeekend("Sat"));
+console.log(isWeekend("Sun"));
+console.log(isWeekend("Mon"))
+// console.log(isWeekend("Sat"));
+// TEST 1:  isWeekend("Sat")  ->  true
+// TEST 2:  isWeekend("Sun")  ->  true
+// TEST 3:  isWeekend("Mon")  ->  false
+
+// ----- 5. Flip it -----
+// Write `flip(value)` that RETURNS the NOT of value (the opposite boolean).
+// your code here
+function flip(value){
+return !value;
+}
+console.log(flip(true));
+console.log(flip(false));
+console.log(flip(0));
+// console.log(flip(true));
+// TEST 1:  flip(true)   ->  false
+// TEST 2:  flip(false)  ->  true
+// TEST 3:  flip(0)      ->  true
+
+// ----- 6. Even number -----
+// Write `isEven(n)` that RETURNS true when n divides evenly by 2 (use %).
+// your code here
+function isEven(n){
+if(n % 2 === 0){return true;}
+else{return false}
+}
+console.log(isEven(8));
+console.log(isEven(7));
+console.log(isEven(0));
+// console.log(isEven(8));
+// TEST 1:  isEven(8)   ->  true
+// TEST 2:  isEven(7)   ->  false
+// TEST 3:  isEven(0)   ->  true
+
+// ----- 7. In range (inclusive) -----
+// Write `inRange(n)` that RETURNS true when n is between 50 and 100 inclusive.
+// your code here
+function inRange(n){
+if(n >= 50 && n < 100){return true;}
+else {return false}
+}
+console.log(inRange(75));
+console.log(inRange(50));
+console.log(inRange(101));
+
+// console.log(inRange(75));
+// TEST 1:  inRange(75)   ->  true
+// TEST 2:  inRange(50)   ->  true
+// TEST 3:  inRange(101)  ->  false
+
+// ----- 8. Default fallback -----
+// Write `displayName(nick)` that RETURNS nick, OR "Guest" when nick is empty.
+// (Use the || operator.)
+// your code here
+function displayName(nick){
+return nick || "Guest";
+
+}
+console.log(displayName(""));
+console.log(displayName("Sam"));
+console.log(displayName("x"));
+// console.log(displayName(""));
+// TEST 1:  displayName("")     ->  "Guest"
+// TEST 2:  displayName("Sam")  ->  "Sam"
+// TEST 3:  displayName("x")    ->  "x"
+
+// ----- 9. Leap-ish check -----
+// Write `divisibleByBoth(n)` that RETURNS true when n divides evenly by
+// BOTH 3 and 5.
+// your code here
+function divisibleByBoth(n){
+return n % 3=== 0 && n % 5=== 0;
+}
+console.log(divisibleByBoth(15));
+console.log(divisibleByBoth(9));
+console.log(divisibleByBoth(30));
+// console.log(divisibleByBoth(15));
+// TEST 1:  divisibleByBoth(15)  ->  true
+// TEST 2:  divisibleByBoth(9)   ->  false
+// TEST 3:  divisibleByBoth(30)  ->  true
+
+// ----- 10. Access granted -----
+// Write `canEnter(pinOk, isAdmin)` that RETURNS true when pinOk is true
+// OR isAdmin is true.
+// your code here
+function canEnter(pinOk, isAdmin){
+return pinOk === true || isAdmin === true;
+}
+console.log(canEnter(false, true));
+console.log(canEnter(true, false));
+console.log(canEnter(false, false));
+// console.log(canEnter(false, true));
+// TEST 1:  canEnter(false, true)   ->  true
+// TEST 2:  canEnter(true, false)   ->  true
+// TEST 3:  canEnter(false, false)  ->  false
+/* ============================================================
+   LESSON 4 â€” IF STATEMENTS: FRESH EXERCISES
+   ------------------------------------------------------------
+   Tools: if / else if / else, plus everything before.
+   Each function RETURNS a value chosen by a decision.
+
+   Run:  node 4-if-statements.js
+   Each exercise: 3 TEST CASES, INPUT -> EXACT RETURN value.
+   ============================================================ */
+
+// ----- 1. Pass or fail -----
+// Write `passFail(score)` that RETURNS "Pass" when score >= 60, else "Fail".
+// your code here
+function passFail(score){
+if (score >= 60){return "Pass";}
+else {return "Fail"}
+}
+console.log(passFail(72));
+console.log(passFail(60));
+console.log(passFail(40));
+// console.log(passFail(72));
+// TEST 1:  passFail(72)  ->  "Pass"
+// TEST 2:  passFail(60)  ->  "Pass"
+// TEST 3:  passFail(40)  ->  "Fail"
+
+// ----- 2. Sign of a number -----
+// Write `signOf(n)` that RETURNS "positive", "negative", or "zero".
+// your code here
+function signOf(n){
+if(n > 0){return "positive";}
+else if (n < 0){return "negative";}
+else {return "zero"}
+}
+console.log(signOf(-4))
+console.log(signOf(0))
+console.log(signOf(9))
+// console.log(signOf(-4));
+// TEST 1:  signOf(-4)  ->  "negative"
+// TEST 2:  signOf(0)   ->  "zero"
+// TEST 3:  signOf(9)   ->  "positive"
+
+// ----- 3. Letter grade -----
+// Write `grade(score)`: 90+ "A", 80-89 "B", 70-79 "C", below 70 "F".
+// your code here
+function grade(score){
+if(score > 90) {return "A";}
+else if (score >= 80 && score <= 89){return "B";}
+else if (score >= 70 && score <= 79){return "C";}
+else {return "F"}
+}
+console.log(grade(95));
+console.log(grade(85));
+console.log(grade(50));
+// console.log(grade(85));
+// TEST 1:  grade(95)  ->  "A"
+// TEST 2:  grade(85)  ->  "B"
+// TEST 3:  grade(50)  ->  "F"
+
+// ----- 4. Bigger of two -----
+// Write `bigger(a, b)` that RETURNS the larger, or "equal" when they match.
+// your code here
+function bigger(a, b){
+if(a > b){return a;}
+else if (a < b ){return b;}
+else {return "equal"}
+}
+console.log(bigger(14, 9));
+console.log(bigger(3, 8));
+console.log(bigger(5, 5));
+// console.log(bigger(14, 9));
+// TEST 1:  bigger(14, 9)  ->  14
+// TEST 2:  bigger(3, 8)   ->  8
+// TEST 3:  bigger(5, 5)   ->  "equal"
+
+// ----- 5. Ticket price -----
+// Write `ticketPrice(age)`: under 12 -> 5, 12 to 64 -> 12, 65+ -> 8.
+// your code here
+function ticketPrice(age){
+if (age <= 12) {return 5;}
+else if (age <= 64){return 12}
+else {return 8}
+}
+console.log(ticketPrice(8));
+console.log(ticketPrice(30));
+console.log(ticketPrice(70));
+// console.log(ticketPrice(70));
+// TEST 1:  ticketPrice(8)   ->  5
+// TEST 2:  ticketPrice(30)  ->  12
+// TEST 3:  ticketPrice(70)  ->  8
+
+// ----- 6. Traffic light -----
+// Write `light(color)`: "green" -> "Go", "yellow" -> "Slow", "red" -> "Stop",
+// anything else -> "Invalid".
+// your code here
+function light(color){
+if ( color === "green"){return "Go";}
+else if(color === "yellow"){return "Slow";}
+else if (color === "red"){return "Stop";}
+else {return "Invalid"}
+}
+console.log(light("green"));
+console.log(light("red"));
+console.log(light("purple"));
+// console.log(light("red"));
+// TEST 1:  light("green")   ->  "Go"
+// TEST 2:  light("red")     ->  "Stop"
+// TEST 3:  light("purple")  ->  "Invalid"
+
+// ----- 7. FizzBuzz of one number -----
+// Write `fizzbuzz(n)`: divisible by 3 and 5 -> "FizzBuzz", by 3 -> "Fizz",
+// by 5 -> "Buzz", else the number n itself.
+// your code here
+function fizzbuzz(n){
+if (n % 3 === 0 && n % 5 === 0){return "FizzBuzz";}
+else if( n % 3 === 0){return "Fizz";}
+else if( n % 5 === 0){return "Buzz";}
+else {return n}
+}
+console.log(fizzbuzz(15));
+console.log(fizzbuzz(9));
+console.log(fizzbuzz(7));
+// console.log(fizzbuzz(15));
+// TEST 1:  fizzbuzz(15)  ->  "FizzBuzz"
+// TEST 2:  fizzbuzz(9)   ->  "Fizz"
+// TEST 3:  fizzbuzz(7)   ->  7
+
+// ----- 8. Temperature advice -----
+// Write `clothes(temp)`: above 28 -> "Shorts", 15 to 28 -> "Jacket",
+// below 15 -> "Coat".
+// your code here
+function clothes(temp){
+if (temp > 28){return "Shorts";}
+else if (temp >= 15 && temp <= 28){return "Jacket";}
+else {return "Coat"}
+}
+console.log(clothes(30));
+console.log(clothes(20));
+console.log(clothes(5));
+// console.log(clothes(30));
+// TEST 1:  clothes(30)  ->  "Shorts"
+// TEST 2:  clothes(20)  ->  "Jacket"
+// TEST 3:  clothes(5)   ->  "Coat"
+
+// ----- 9. Login result -----
+// Write `login(user, pass)` that RETURNS "Welcome" when user is "admin"
+// AND pass is "1234", otherwise "Denied".
+// your code here
+function login(user, pass){
+if (user === "admin" && pass === "1234"){return "Welcome";}
+else {return "Denied"}
+}
+console.log(login("admin", "1234"));
+console.log(login("admin", "0000"));
+console.log(login("guest", "1234"));
+// console.log(login("admin", "1234"));
+// TEST 1:  login("admin", "1234")  ->  "Welcome"
+// TEST 2:  login("admin", "0000")  ->  "Denied"
+// TEST 3:  login("guest", "1234")  ->  "Denied"
+
+// ----- 10. Absolute value -----
+// Write `absValue(n)` that RETURNS n when n >= 0, otherwise -n.
+// your code here
+function absValue(n){
+if (n >= 0){return n}
+else {return -n}
+}
+console.log(absValue(-7));
+console.log(absValue(7));
+console.log(absValue(0));
+// console.log(absValue(-7));
+// TEST 1:  absValue(-7)  ->  7
+// TEST 2:  absValue(7)   ->  7
+// TEST 3:  absValue(0)   ->  0
+/* ============================================================
+   LESSON 5 â€” STRINGS: FRESH EXERCISES
+   ------------------------------------------------------------
+   Tools: .length, [i], .toUpperCase/.toLowerCase, .includes,
+   .indexOf, .slice, .trim, + , String()/Number()/isNaN, if.
+   NO loops, NO functions-inside beyond these. Each RETURNS a value.
+
+   Run:  node 5-strings.js
+   Each exercise: 3 TEST CASES, INPUT -> EXACT RETURN value.
+   ============================================================ */
+
+// ----- 1. Shout it -----
+// Write `shout(text)` that RETURNS text in ALL CAPS.
+// your code here
+function shout(text){
+return text;
+}
+console.log(shout("hi"));
+console.log(shout("Code"));
+console.log(shout("a"))
+// console.log(shout("hi"));
+// TEST 1:  shout("hi")     ->  "HI"
+// TEST 2:  shout("Code")   ->  "CODE"
+// TEST 3:  shout("a")      ->  "A"
+
+// ----- 2. First letter -----
+// Write `firstLetter(word)` that RETURNS the character at index 0.
+// your code here
+function firstLetter(word){
+return word[0]; 
+}
+console.log(firstLetter("hello"));
+console.log(firstLetter("Zebra"));
+console.log(firstLetter("x"))
+// console.log(firstLetter("hello"));
+// TEST 1:  firstLetter("hello")  ->  "h"
+// TEST 2:  firstLetter("Zebra")  ->  "Z"
+// TEST 3:  firstLetter("x")      ->  "x"
+
+// ----- 3. Last letter -----
+// Write `lastLetter(word)` that RETURNS the last character of any length word.
+// your code here
+function lastLetter(word){
+return word[word.length -1]
+}
+console.log(lastLetter("hello"));
+console.log(lastLetter("cat"));
+console.log(lastLetter("z"));
+// console.log(lastLetter("hello"));
+// TEST 1:  lastLetter("hello")  ->  "o"
+// TEST 2:  lastLetter("cat")    ->  "t"
+// TEST 3:  lastLetter("z")      ->  "z"
+
+// ----- 4. Initials -----
+// Write `initials(first, last)` that RETURNS the two first letters,
+// uppercased, joined with a dot: "M.J".
+// your code here
+function initials(first, last){
+return first [0] + "." + last[0];
+}
+console.log(initials("maria", "jones"))
+// console.log(initials("maria", "jones"));
+// TEST 1:  initials("maria", "jones")  ->  "M.J"
+// TEST 2:  initials("sam", "lee")      ->  "S.L"
+// TEST 3:  initials("a", "b")          ->  "A.B"
+
+// ----- 5. Capitalize -----
+// Write `capitalize(word)` that RETURNS the word with the first letter
+// uppercased and the rest unchanged.
+// your code here
+function capitalize(word){
+return word[0].toUpperCase()+word.slice(1);
+}
+console.log(capitalize("maria"));
+console.log(capitalize("code"));
+console.log(capitalize("x"));
+// console.log(capitalize("maria"));
+// TEST 1:  capitalize("maria")  ->  "Maria"
+// TEST 2:  capitalize("code")   ->  "Code"
+// TEST 3:  capitalize("x")      ->  "X"
+
+// ----- 6. Looks like an email -----
+// Write `isEmail(text)` that RETURNS true when text includes "@", else false.
+// your code here
+function isEmail(text){
+return text.includes("@")
+}
+console.log(isEmail("sam@mail.com"));
+console.log(isEmail("sam.com"));
+console.log(isEmail("@"));
+// console.log(isEmail("sam@mail.com"));
+// TEST 1:  isEmail("sam@mail.com")  ->  true
+// TEST 2:  isEmail("sam.com")       ->  false
+// TEST 3:  isEmail("@")             ->  true
+
+// ----- 7. Valid username length -----
+// Write `validUsername(name)` that RETURNS "Valid" when length is >= 3
+// AND <= 15, otherwise "Invalid".
+// your code here
+function validUsername(name){
+if (name.length >= 3 && name.length <= 15) {return "Valid";}
+else {return "Invalid"}
+}
+console.log(validUsername("jordan"));
+console.log(validUsername("jo"));
+console.log(validUsername("a"));
+// console.log(validUsername("jordan"));
+// TEST 1:  validUsername("jordan")  ->  "Valid"
+// TEST 2:  validUsername("jo")      ->  "Invalid"
+// TEST 3:  validUsername("a")       ->  "Invalid"
+
+// ----- 8. Area code -----
+// Write `areaCode(phone)` (10-char string) that RETURNS the first 3 chars.
+// your code here
+function areaCode(phone){
+return phone.slice(0, 3)
+}
+ console.log(areaCode("5551234567"));
+  console.log(areaCode("2129998888"));
+   console.log(areaCode("0000000000"));
+// console.log(areaCode("5551234567"));
+// TEST 1:  areaCode("5551234567")  ->  "555"
+// TEST 2:  areaCode("2129998888")  ->  "212"
+// TEST 3:  areaCode("0000000000")  ->  "000"
+
+// ----- 9. Same word ignoring case -----
+// Write `sameWord(a, b)` that RETURNS true when a and b match ignoring case.
+// your code here
+function sameWord(a, b){
+return a.toLowerCase() === b.toLowerCase();
+}
+console.log(sameWord("Hello", "hello"));
+console.log(sameWord("cat", "dog"));
+console.log(sameWord("ABC", "abc"));
+// console.log(sameWord("Hello", "hello"));
+// TEST 1:  sameWord("Hello", "hello")  ->  true
+// TEST 2:  sameWord("cat", "dog")      ->  false
+// TEST 3:  sameWord("ABC", "abc")      ->  true
+
+// ----- 10. Clean and measure -----
+// Write `cleanLength(raw)` that trims the spaces off both ends and RETURNS
+// the length of what is left.
+// your code here
+function cleanLength(raw){
+let trimmed = raw.trim(); return trimmed.length;
+}
+console.log(cleanLength("  hi  "));
+console.log(cleanLength("  hello  "));
+console.log(cleanLength("  x  "));
+// console.log(cleanLength("  hi  "));
+// TEST 1:  cleanLength("  hi  ")      ->  2
+// TEST 2:  cleanLength("  hello   ")  ->  5
+// TEST 3:  cleanLength("x")           ->  1
+
+// ----- 11. Pad the clock -----
+// Write `padClock(minute)` (0-59 number). RETURN a 2-char string, adding a
+// leading "0" when it is a single digit: 5 -> "05", 42 -> "42".
+// your code here
+function padClock(minute){
+return minute < 10 ? "0" + minute: "" + minute
+}
+console.log(padClock(5));
+console.log(padClock(42));
+console.log(padClock(0));
+// console.log(padClock(5));
+// TEST 1:  padClock(5)   ->  "05"
+// TEST 2:  padClock(42)  ->  "42"
+// TEST 3:  padClock(0)   ->  "00"
+
+// ----- 12. Cents to price tag -----
+// Write `priceTag(cents)` (3+ digit whole number). RETURN "$D.CC" where CC
+// is the last 2 digits and D is the rest: 150 -> "$1.50", 905 -> "$9.05".
+// your code here
+
+// console.log(priceTag(150));
+// TEST 1:  priceTag(150)  ->  "$1.50"
+// TEST 2:  priceTag(905)  ->  "$9.05"
+// TEST 3:  priceTag(1299) ->  "$12.99"
