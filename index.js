@@ -19,16 +19,16 @@ console.log("Hello World");
 // Write `runningTotal()` (no input). Start let sum = 0, add 8, add 8,
 // subtract 1, then RETURN sum.
 // your code here
-function runningTotal(){
-let sum = 0;
-sum +=8;
-sum +=8;
-sum -=1;
-return sum;
+function runningTotal() {
+  let sum = 0;
+  sum += 8;
+  sum += 8;
+  sum -= 1;
+  return sum;
 }
-console.log(runningTotal())
-console.log(runningTotal()+5)
-console.log(runningTotal()*2)
+console.log(runningTotal());
+console.log(runningTotal() + 5);
+console.log(runningTotal() * 2);
 // console.log(runningTotal());
 // TEST 1:  runningTotal()      ->  15
 // TEST 2:  runningTotal() + 5  ->  20
@@ -38,12 +38,12 @@ console.log(runningTotal()*2)
 // Write `swapLabel(a, b)` that RETURNS b + "-" + a (the two joined,
 // swapped, with a dash between).
 // your code here
-function swapLabel(a, b){
-return (b + "-" + a)
+function swapLabel(a, b) {
+  return b + "-" + a;
 }
-console.log(swapLabel("left", "right"))
-console.log(swapLabel("1", "2"))
-console.log(swapLabel("a", "b"))
+console.log(swapLabel("left", "right"));
+console.log(swapLabel("1", "2"));
+console.log(swapLabel("a", "b"));
 // console.log(swapLabel("left", "right"));
 // TEST 1:  swapLabel("left", "right")  ->  "right-left"
 // TEST 2:  swapLabel("1", "2")         ->  "2-1"
@@ -52,15 +52,15 @@ console.log(swapLabel("a", "b"))
 // ----- 3. Triple then bump -----
 // Write `tripleBump(n)`. Set let x = n * 3, then add 1 to x, then RETURN x.
 // your code here
-function tripleBump(n){
-let x = n;
-x *= 3;
-x += 1;
-return x;
+function tripleBump(n) {
+  let x = n;
+  x *= 3;
+  x += 1;
+  return x;
 }
-console.log(tripleBump(4))
-console.log(tripleBump(0))
-console.log(tripleBump(10))
+console.log(tripleBump(4));
+console.log(tripleBump(0));
+console.log(tripleBump(10));
 // console.log(tripleBump(4));
 // TEST 1:  tripleBump(4)   ->  13
 // TEST 2:  tripleBump(0)   ->  1
@@ -69,10 +69,10 @@ console.log(tripleBump(10))
 // ----- 4. Full name -----
 // Write `fullName(first, last)` that RETURNS the two joined with one space.
 // your code here
-function fullName(first, last){
-return first + " " + last;
+function fullName(first, last) {
+  return first + " " + last;
 }
-console.log(fullName("Ada", "Lovelace"))
+console.log(fullName("Ada", "Lovelace"));
 // console.log(fullName("Ada", "Lovelace"));
 // TEST 1:  fullName("Ada", "Lovelace")  ->  "Ada Lovelace"
 // TEST 2:  fullName("Sam", "Lee")       ->  "Sam Lee"
@@ -82,11 +82,11 @@ console.log(fullName("Ada", "Lovelace"))
 // Write `withTax(price)`. Use const TAX = 0.1, then RETURN price plus
 // price * TAX.
 // your code here
-function withTax(price){
-const TAX = 0.1;
-return price + price * TAX;
+function withTax(price) {
+  const TAX = 0.1;
+  return price + price * TAX;
 }
-console.log(withTax(100))
+console.log(withTax(100));
 // console.log(withTax(100));
 // TEST 1:  withTax(100)  ->  110
 // TEST 2:  withTax(50)   ->  55
@@ -95,15 +95,15 @@ console.log(withTax(100))
 // ----- 6. Count up by one, three times -----
 // Write `countUp3(start)`. Set let c = start, then c++ three times, RETURN c.
 // your code here
-function countUp3(start){
-let c = start;
-c++;
-c++;
-c++;
-return c
+function countUp3(start) {
+  let c = start;
+  c++;
+  c++;
+  c++;
+  return c;
 }
-console.log(countUp3(7))
-console.log(countUp3(0))
+console.log(countUp3(7));
+console.log(countUp3(0));
 // console.log(countUp3(7));
 // TEST 1:  countUp3(7)   ->  10
 // TEST 2:  countUp3(0)   ->  3
@@ -112,10 +112,10 @@ console.log(countUp3(0))
 // ----- 7. Average of two -----
 // Write `avgTwo(a, b)` that RETURNS the average of a and b.
 // your code here
-function avgTwo(a, b){
-const total = a + b;
-const average = total / 2;
-return average;
+function avgTwo(a, b) {
+  const total = a + b;
+  const average = total / 2;
+  return average;
 }
 console.log(avgTwo(4, 8));
 console.log(avgTwo(10, 20));
@@ -129,14 +129,14 @@ console.log(avgTwo(3, 3));
 // Write `doubleArea(w, h)`. Set let area = w * h, then reassign
 // area = area * 2, RETURN area.
 // your code here
-function doubleArea(w, h){
-let area = w * h;
-area *= 2;
-return area;
+function doubleArea(w, h) {
+  let area = w * h;
+  area *= 2;
+  return area;
 }
-console.log(doubleArea(3, 4))
-console.log(doubleArea(5, 2))
-console.log(doubleArea(1, 1))
+console.log(doubleArea(3, 4));
+console.log(doubleArea(5, 2));
+console.log(doubleArea(1, 1));
 // console.log(doubleArea(3, 4));
 // TEST 1:  doubleArea(3, 4)  ->  24
 // TEST 2:  doubleArea(5, 2)  ->  20
@@ -155,12 +155,12 @@ console.log(doubleArea(1, 1))
 // ----- 1. What type is it? -----
 // Write `whatType(value)` that RETURNS the typeof string of value.
 // your code here
-function whatType(value){
-return typeof value;
+function whatType(value) {
+  return typeof value;
 }
 console.log(whatType(42));
-console.log(whatType("hi"))
-console.log(whatType(true))
+console.log(whatType("hi"));
+console.log(whatType(true));
 // console.log(whatType(42));
 // TEST 1:  whatType(42)      ->  "number"
 // TEST 2:  whatType("hi")    ->  "string"
@@ -169,12 +169,12 @@ console.log(whatType(true))
 // ----- 2. String to number -----
 // Write `toNumber(text)` that RETURNS text turned into a real number.
 // your code here
-function toNumber(text){
-return Number(text);
+function toNumber(text) {
+  return Number(text);
 }
-console.log(toNumber("42"))
-console.log(toNumber("7")+1)
-console.log(toNumber("100")*2)
+console.log(toNumber("42"));
+console.log(toNumber("7") + 1);
+console.log(toNumber("100") * 2);
 // console.log(toNumber("42"));
 // TEST 1:  toNumber("42")        ->  42
 // TEST 2:  toNumber("7") + 1     ->  8
@@ -183,8 +183,8 @@ console.log(toNumber("100")*2)
 // ----- 3. Number to string -----
 // Write `toText(n)` that RETURNS n turned into a string.
 // your code here
-function toText(n){
-return String(n);
+function toText(n) {
+  return String(n);
 }
 console.log(toText(42));
 console.log(typeof toText(5));
@@ -198,12 +198,12 @@ console.log(toText(9) + " ! ");
 // Write `mix(a, b)` where a is a number and b is a string. RETURN a + b.
 // (Find out what JS does when you add a number to a string.)
 // your code here
-function mix(a, b){
-return a + "" + b
+function mix(a, b) {
+  return a + "" + b;
 }
-console.log(mix(5, "5"))
-console.log(mix(1, "0"))
-console.log(typeof mix(2, "x"))
+console.log(mix(5, "5"));
+console.log(mix(1, "0"));
+console.log(typeof mix(2, "x"));
 // console.log(mix(5, "5"));
 // TEST 1:  mix(5, "5")       ->  "55"
 // TEST 2:  mix(1, "0")       ->  "10"
@@ -213,14 +213,17 @@ console.log(typeof mix(2, "x"))
 // Write `isRealNumber(text)` that RETURNS true if Number(text) is a valid
 // number, false if it is NaN.
 // your code here
-function isRealNumber(text){
-const hoosonz = Number(text);
-if(isNaN(hoosonz)){return false;}
-else{return true;}
+function isRealNumber(text) {
+  const hoosonz = Number(text);
+  if (isNaN(hoosonz)) {
+    return false;
+  } else {
+    return true;
+  }
 }
-console.log(isRealNumber("42"))
-console.log(isRealNumber("hello"))
-console.log(isRealNumber("3.14"))
+console.log(isRealNumber("42"));
+console.log(isRealNumber("hello"));
+console.log(isRealNumber("3.14"));
 // console.log(isRealNumber("42"));
 // TEST 1:  isRealNumber("42")    ->  true
 // TEST 2:  isRealNumber("hello") ->  false
@@ -230,12 +233,12 @@ console.log(isRealNumber("3.14"))
 // Write `asBoolean(value)` that RETURNS value turned into a true/false
 // with Boolean(value).
 // your code here
-function asBoolean(value){
-return Boolean(value);
+function asBoolean(value) {
+  return Boolean(value);
 }
-console.log(asBoolean(0))
-console.log(asBoolean(1))
-console.log(asBoolean(""))
+console.log(asBoolean(0));
+console.log(asBoolean(1));
+console.log(asBoolean(""));
 // console.log(asBoolean(0));
 // TEST 1:  asBoolean(0)    ->  false
 // TEST 2:  asBoolean(1)    ->  true
@@ -244,13 +247,16 @@ console.log(asBoolean(""))
 // ----- 7. Undefined check -----
 // Write `isMissing(value)` that RETURNS true when value is undefined.
 // your code here
-function isMissing(value){
-if(value === undefined) {return true;}
-else {return false;}
+function isMissing(value) {
+  if (value === undefined) {
+    return true;
+  } else {
+    return false;
+  }
 }
-console.log(isMissing(undefined))
-console.log(isMissing(0))
-console.log(isMissing("x"))
+console.log(isMissing(undefined));
+console.log(isMissing(0));
+console.log(isMissing("x"));
 // console.log(isMissing(undefined));
 // TEST 1:  isMissing(undefined)  ->  true
 // TEST 2:  isMissing(0)          ->  false
@@ -260,15 +266,14 @@ console.log(isMissing("x"))
 // Write `firstDigitType(n)`. Turn n into a string, take its first
 // character, RETURN the typeof that character.
 // your code here
-function firstDigitType(n){
-const str = String(n);
-const firstChar = str[0];
-return typeof firstChar;
+function firstDigitType(n) {
+  const str = String(n);
+  const firstChar = str[0];
+  return typeof firstChar;
 }
 console.log(firstDigitType(42));
 console.log(firstDigitType(7));
 console.log(firstDigitType(900));
-
 
 // console.log(firstDigitType(42));
 // TEST 1:  firstDigitType(42)   ->  "string"
@@ -287,9 +292,12 @@ console.log(firstDigitType(900));
 // ----- 1. Is it bigger? -----
 // Write `isBigger(a, b)` that RETURNS true when a is greater than b.
 // your code here
-function isBigger(a, b){
-if (a > b){return true;}
-else {return false;}
+function isBigger(a, b) {
+  if (a > b) {
+    return true;
+  } else {
+    return false;
+  }
 }
 console.log(isBigger(10, 3));
 console.log(isBigger(3, 10));
@@ -302,9 +310,12 @@ console.log(isBigger(5, 5));
 // ----- 2. Exactly equal -----
 // Write `sameValueAndType(a, b)` that RETURNS true only when a === b.
 // your code here
-function sameValueAndType(a, b){
-if (a === b){return true;}
-else {return false;}
+function sameValueAndType(a, b) {
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
 }
 console.log(sameValueAndType(5, 5));
 console.log(sameValueAndType(5, "5"));
@@ -317,9 +328,12 @@ console.log(sameValueAndType("a", "a"));
 // ----- 3. In working hours -----
 // Write `isWorkHour(hour)` that RETURNS true when hour is >= 9 AND < 17.
 // your code here
-function isWorkHour(hour){
-if (hour >= 9 && hour < 17){return true;}
-else {return false}
+function isWorkHour(hour) {
+  if (hour >= 9 && hour < 17) {
+    return true;
+  } else {
+    return false;
+  }
 }
 console.log(isWorkHour(10));
 console.log(isWorkHour(17));
@@ -332,13 +346,16 @@ console.log(isWorkHour(8));
 // ----- 4. Weekend day -----
 // Write `isWeekend(day)` that RETURNS true when day is "Sat" OR "Sun".
 // your code here
-function isWeekend(day){
-if (day === "Sat" || day === "Sun"){return true;}
-else {return false;}
+function isWeekend(day) {
+  if (day === "Sat" || day === "Sun") {
+    return true;
+  } else {
+    return false;
+  }
 }
 console.log(isWeekend("Sat"));
 console.log(isWeekend("Sun"));
-console.log(isWeekend("Mon"))
+console.log(isWeekend("Mon"));
 // console.log(isWeekend("Sat"));
 // TEST 1:  isWeekend("Sat")  ->  true
 // TEST 2:  isWeekend("Sun")  ->  true
@@ -347,8 +364,8 @@ console.log(isWeekend("Mon"))
 // ----- 5. Flip it -----
 // Write `flip(value)` that RETURNS the NOT of value (the opposite boolean).
 // your code here
-function flip(value){
-return !value;
+function flip(value) {
+  return !value;
 }
 console.log(flip(true));
 console.log(flip(false));
@@ -361,9 +378,12 @@ console.log(flip(0));
 // ----- 6. Even number -----
 // Write `isEven(n)` that RETURNS true when n divides evenly by 2 (use %).
 // your code here
-function isEven(n){
-if(n % 2 === 0){return true;}
-else{return false}
+function isEven(n) {
+  if (n % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 console.log(isEven(8));
 console.log(isEven(7));
@@ -376,9 +396,12 @@ console.log(isEven(0));
 // ----- 7. In range (inclusive) -----
 // Write `inRange(n)` that RETURNS true when n is between 50 and 100 inclusive.
 // your code here
-function inRange(n){
-if(n >= 50 && n < 100){return true;}
-else {return false}
+function inRange(n) {
+  if (n >= 50 && n < 100) {
+    return true;
+  } else {
+    return false;
+  }
 }
 console.log(inRange(75));
 console.log(inRange(50));
@@ -393,9 +416,8 @@ console.log(inRange(101));
 // Write `displayName(nick)` that RETURNS nick, OR "Guest" when nick is empty.
 // (Use the || operator.)
 // your code here
-function displayName(nick){
-return nick || "Guest";
-
+function displayName(nick) {
+  return nick || "Guest";
 }
 console.log(displayName(""));
 console.log(displayName("Sam"));
@@ -409,8 +431,8 @@ console.log(displayName("x"));
 // Write `divisibleByBoth(n)` that RETURNS true when n divides evenly by
 // BOTH 3 and 5.
 // your code here
-function divisibleByBoth(n){
-return n % 3=== 0 && n % 5=== 0;
+function divisibleByBoth(n) {
+  return n % 3 === 0 && n % 5 === 0;
 }
 console.log(divisibleByBoth(15));
 console.log(divisibleByBoth(9));
@@ -424,8 +446,8 @@ console.log(divisibleByBoth(30));
 // Write `canEnter(pinOk, isAdmin)` that RETURNS true when pinOk is true
 // OR isAdmin is true.
 // your code here
-function canEnter(pinOk, isAdmin){
-return pinOk === true || isAdmin === true;
+function canEnter(pinOk, isAdmin) {
+  return pinOk === true || isAdmin === true;
 }
 console.log(canEnter(false, true));
 console.log(canEnter(true, false));
@@ -447,9 +469,12 @@ console.log(canEnter(false, false));
 // ----- 1. Pass or fail -----
 // Write `passFail(score)` that RETURNS "Pass" when score >= 60, else "Fail".
 // your code here
-function passFail(score){
-if (score >= 60){return "Pass";}
-else {return "Fail"}
+function passFail(score) {
+  if (score >= 60) {
+    return "Pass";
+  } else {
+    return "Fail";
+  }
 }
 console.log(passFail(72));
 console.log(passFail(60));
@@ -462,14 +487,18 @@ console.log(passFail(40));
 // ----- 2. Sign of a number -----
 // Write `signOf(n)` that RETURNS "positive", "negative", or "zero".
 // your code here
-function signOf(n){
-if(n > 0){return "positive";}
-else if (n < 0){return "negative";}
-else {return "zero"}
+function signOf(n) {
+  if (n > 0) {
+    return "positive";
+  } else if (n < 0) {
+    return "negative";
+  } else {
+    return "zero";
+  }
 }
-console.log(signOf(-4))
-console.log(signOf(0))
-console.log(signOf(9))
+console.log(signOf(-4));
+console.log(signOf(0));
+console.log(signOf(9));
 // console.log(signOf(-4));
 // TEST 1:  signOf(-4)  ->  "negative"
 // TEST 2:  signOf(0)   ->  "zero"
@@ -478,11 +507,16 @@ console.log(signOf(9))
 // ----- 3. Letter grade -----
 // Write `grade(score)`: 90+ "A", 80-89 "B", 70-79 "C", below 70 "F".
 // your code here
-function grade(score){
-if(score > 90) {return "A";}
-else if (score >= 80 && score <= 89){return "B";}
-else if (score >= 70 && score <= 79){return "C";}
-else {return "F"}
+function grade(score) {
+  if (score > 90) {
+    return "A";
+  } else if (score >= 80 && score <= 89) {
+    return "B";
+  } else if (score >= 70 && score <= 79) {
+    return "C";
+  } else {
+    return "F";
+  }
 }
 console.log(grade(95));
 console.log(grade(85));
@@ -495,10 +529,14 @@ console.log(grade(50));
 // ----- 4. Bigger of two -----
 // Write `bigger(a, b)` that RETURNS the larger, or "equal" when they match.
 // your code here
-function bigger(a, b){
-if(a > b){return a;}
-else if (a < b ){return b;}
-else {return "equal"}
+function bigger(a, b) {
+  if (a > b) {
+    return a;
+  } else if (a < b) {
+    return b;
+  } else {
+    return "equal";
+  }
 }
 console.log(bigger(14, 9));
 console.log(bigger(3, 8));
@@ -511,10 +549,14 @@ console.log(bigger(5, 5));
 // ----- 5. Ticket price -----
 // Write `ticketPrice(age)`: under 12 -> 5, 12 to 64 -> 12, 65+ -> 8.
 // your code here
-function ticketPrice(age){
-if (age <= 12) {return 5;}
-else if (age <= 64){return 12}
-else {return 8}
+function ticketPrice(age) {
+  if (age <= 12) {
+    return 5;
+  } else if (age <= 64) {
+    return 12;
+  } else {
+    return 8;
+  }
 }
 console.log(ticketPrice(8));
 console.log(ticketPrice(30));
@@ -528,11 +570,16 @@ console.log(ticketPrice(70));
 // Write `light(color)`: "green" -> "Go", "yellow" -> "Slow", "red" -> "Stop",
 // anything else -> "Invalid".
 // your code here
-function light(color){
-if ( color === "green"){return "Go";}
-else if(color === "yellow"){return "Slow";}
-else if (color === "red"){return "Stop";}
-else {return "Invalid"}
+function light(color) {
+  if (color === "green") {
+    return "Go";
+  } else if (color === "yellow") {
+    return "Slow";
+  } else if (color === "red") {
+    return "Stop";
+  } else {
+    return "Invalid";
+  }
 }
 console.log(light("green"));
 console.log(light("red"));
@@ -546,11 +593,16 @@ console.log(light("purple"));
 // Write `fizzbuzz(n)`: divisible by 3 and 5 -> "FizzBuzz", by 3 -> "Fizz",
 // by 5 -> "Buzz", else the number n itself.
 // your code here
-function fizzbuzz(n){
-if (n % 3 === 0 && n % 5 === 0){return "FizzBuzz";}
-else if( n % 3 === 0){return "Fizz";}
-else if( n % 5 === 0){return "Buzz";}
-else {return n}
+function fizzbuzz(n) {
+  if (n % 3 === 0 && n % 5 === 0) {
+    return "FizzBuzz";
+  } else if (n % 3 === 0) {
+    return "Fizz";
+  } else if (n % 5 === 0) {
+    return "Buzz";
+  } else {
+    return n;
+  }
 }
 console.log(fizzbuzz(15));
 console.log(fizzbuzz(9));
@@ -564,10 +616,14 @@ console.log(fizzbuzz(7));
 // Write `clothes(temp)`: above 28 -> "Shorts", 15 to 28 -> "Jacket",
 // below 15 -> "Coat".
 // your code here
-function clothes(temp){
-if (temp > 28){return "Shorts";}
-else if (temp >= 15 && temp <= 28){return "Jacket";}
-else {return "Coat"}
+function clothes(temp) {
+  if (temp > 28) {
+    return "Shorts";
+  } else if (temp >= 15 && temp <= 28) {
+    return "Jacket";
+  } else {
+    return "Coat";
+  }
 }
 console.log(clothes(30));
 console.log(clothes(20));
@@ -581,9 +637,12 @@ console.log(clothes(5));
 // Write `login(user, pass)` that RETURNS "Welcome" when user is "admin"
 // AND pass is "1234", otherwise "Denied".
 // your code here
-function login(user, pass){
-if (user === "admin" && pass === "1234"){return "Welcome";}
-else {return "Denied"}
+function login(user, pass) {
+  if (user === "admin" && pass === "1234") {
+    return "Welcome";
+  } else {
+    return "Denied";
+  }
 }
 console.log(login("admin", "1234"));
 console.log(login("admin", "0000"));
@@ -596,9 +655,12 @@ console.log(login("guest", "1234"));
 // ----- 10. Absolute value -----
 // Write `absValue(n)` that RETURNS n when n >= 0, otherwise -n.
 // your code here
-function absValue(n){
-if (n >= 0){return n}
-else {return -n}
+function absValue(n) {
+  if (n >= 0) {
+    return n;
+  } else {
+    return -n;
+  }
 }
 console.log(absValue(-7));
 console.log(absValue(7));
@@ -621,12 +683,12 @@ console.log(absValue(0));
 // ----- 1. Shout it -----
 // Write `shout(text)` that RETURNS text in ALL CAPS.
 // your code here
-function shout(text){
-return text;
+function shout(text) {
+  return text;
 }
 console.log(shout("hi"));
 console.log(shout("Code"));
-console.log(shout("a"))
+console.log(shout("a"));
 // console.log(shout("hi"));
 // TEST 1:  shout("hi")     ->  "HI"
 // TEST 2:  shout("Code")   ->  "CODE"
@@ -635,12 +697,12 @@ console.log(shout("a"))
 // ----- 2. First letter -----
 // Write `firstLetter(word)` that RETURNS the character at index 0.
 // your code here
-function firstLetter(word){
-return word[0]; 
+function firstLetter(word) {
+  return word[0];
 }
 console.log(firstLetter("hello"));
 console.log(firstLetter("Zebra"));
-console.log(firstLetter("x"))
+console.log(firstLetter("x"));
 // console.log(firstLetter("hello"));
 // TEST 1:  firstLetter("hello")  ->  "h"
 // TEST 2:  firstLetter("Zebra")  ->  "Z"
@@ -649,8 +711,8 @@ console.log(firstLetter("x"))
 // ----- 3. Last letter -----
 // Write `lastLetter(word)` that RETURNS the last character of any length word.
 // your code here
-function lastLetter(word){
-return word[word.length -1]
+function lastLetter(word) {
+  return word[word.length - 1];
 }
 console.log(lastLetter("hello"));
 console.log(lastLetter("cat"));
@@ -664,10 +726,10 @@ console.log(lastLetter("z"));
 // Write `initials(first, last)` that RETURNS the two first letters,
 // uppercased, joined with a dot: "M.J".
 // your code here
-function initials(first, last){
-return first [0] + "." + last[0];
+function initials(first, last) {
+  return first[0] + "." + last[0];
 }
-console.log(initials("maria", "jones"))
+console.log(initials("maria", "jones"));
 // console.log(initials("maria", "jones"));
 // TEST 1:  initials("maria", "jones")  ->  "M.J"
 // TEST 2:  initials("sam", "lee")      ->  "S.L"
@@ -677,8 +739,8 @@ console.log(initials("maria", "jones"))
 // Write `capitalize(word)` that RETURNS the word with the first letter
 // uppercased and the rest unchanged.
 // your code here
-function capitalize(word){
-return word[0].toUpperCase()+word.slice(1);
+function capitalize(word) {
+  return word[0].toUpperCase() + word.slice(1);
 }
 console.log(capitalize("maria"));
 console.log(capitalize("code"));
@@ -691,8 +753,8 @@ console.log(capitalize("x"));
 // ----- 6. Looks like an email -----
 // Write `isEmail(text)` that RETURNS true when text includes "@", else false.
 // your code here
-function isEmail(text){
-return text.includes("@")
+function isEmail(text) {
+  return text.includes("@");
 }
 console.log(isEmail("sam@mail.com"));
 console.log(isEmail("sam.com"));
@@ -706,9 +768,12 @@ console.log(isEmail("@"));
 // Write `validUsername(name)` that RETURNS "Valid" when length is >= 3
 // AND <= 15, otherwise "Invalid".
 // your code here
-function validUsername(name){
-if (name.length >= 3 && name.length <= 15) {return "Valid";}
-else {return "Invalid"}
+function validUsername(name) {
+  if (name.length >= 3 && name.length <= 15) {
+    return "Valid";
+  } else {
+    return "Invalid";
+  }
 }
 console.log(validUsername("jordan"));
 console.log(validUsername("jo"));
@@ -721,12 +786,12 @@ console.log(validUsername("a"));
 // ----- 8. Area code -----
 // Write `areaCode(phone)` (10-char string) that RETURNS the first 3 chars.
 // your code here
-function areaCode(phone){
-return phone.slice(0, 3)
+function areaCode(phone) {
+  return phone.slice(0, 3);
 }
- console.log(areaCode("5551234567"));
-  console.log(areaCode("2129998888"));
-   console.log(areaCode("0000000000"));
+console.log(areaCode("5551234567"));
+console.log(areaCode("2129998888"));
+console.log(areaCode("0000000000"));
 // console.log(areaCode("5551234567"));
 // TEST 1:  areaCode("5551234567")  ->  "555"
 // TEST 2:  areaCode("2129998888")  ->  "212"
@@ -735,8 +800,8 @@ return phone.slice(0, 3)
 // ----- 9. Same word ignoring case -----
 // Write `sameWord(a, b)` that RETURNS true when a and b match ignoring case.
 // your code here
-function sameWord(a, b){
-return a.toLowerCase() === b.toLowerCase();
+function sameWord(a, b) {
+  return a.toLowerCase() === b.toLowerCase();
 }
 console.log(sameWord("Hello", "hello"));
 console.log(sameWord("cat", "dog"));
@@ -750,8 +815,9 @@ console.log(sameWord("ABC", "abc"));
 // Write `cleanLength(raw)` that trims the spaces off both ends and RETURNS
 // the length of what is left.
 // your code here
-function cleanLength(raw){
-let trimmed = raw.trim(); return trimmed.length;
+function cleanLength(raw) {
+  let trimmed = raw.trim();
+  return trimmed.length;
 }
 console.log(cleanLength("  hi  "));
 console.log(cleanLength("  hello  "));
@@ -765,8 +831,8 @@ console.log(cleanLength("  x  "));
 // Write `padClock(minute)` (0-59 number). RETURN a 2-char string, adding a
 // leading "0" when it is a single digit: 5 -> "05", 42 -> "42".
 // your code here
-function padClock(minute){
-return minute < 10 ? "0" + minute: "" + minute
+function padClock(minute) {
+  return minute < 10 ? "0" + minute : "" + minute;
 }
 console.log(padClock(5));
 console.log(padClock(42));
@@ -780,8 +846,565 @@ console.log(padClock(0));
 // Write `priceTag(cents)` (3+ digit whole number). RETURN "$D.CC" where CC
 // is the last 2 digits and D is the rest: 150 -> "$1.50", 905 -> "$9.05".
 // your code here
-
+function priceTag(cents) {
+  return (
+    "$" + Math.floor(cents / 100) + " . " + String(cents % 100).padStart(2, "0")
+  );
+}
+console.log(priceTag(150));
+console.log(priceTag(905));
+console.log(priceTag(1299));
 // console.log(priceTag(150));
 // TEST 1:  priceTag(150)  ->  "$1.50"
 // TEST 2:  priceTag(905)  ->  "$9.05"
 // TEST 3:  priceTag(1299) ->  "$12.99"
+/* ============================================================
+   LESSON 6 â€” LOOPS: FRESH EXERCISES
+   ------------------------------------------------------------
+   Tools: for / while, % , Math.floor, strings, if. NO arrays.
+   Each function RETURNS its answer (a number, string, or boolean).
+
+   Run:  node 6-loops.js
+   Each exercise: 3 TEST CASES, INPUT -> EXACT RETURN value.
+   ============================================================ */
+
+// ----- 1. Sum to n -----
+// Write `sumTo(n)` that RETURNS 1 + 2 + ... + n.
+// your code here
+function sumTo(n) {
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    sum = sum + i;
+  }
+  return sum;
+}
+console.log(sumTo(5));
+console.log(sumTo(1));
+console.log(sumTo(10));
+// console.log(sumTo(5));
+// TEST 1:  sumTo(5)    ->  15
+// TEST 2:  sumTo(1)    ->  1
+// TEST 3:  sumTo(10)   ->  55
+
+// ----- 2. Count multiples of 4 -----
+// Write `countFours(max)` that RETURNS how many numbers 1..max divide by 4.
+// your code here
+function countFours(max) {
+  let count = 0;
+  for (let i = 1; i <= max; i++) {
+    if (i % 4 === 0) {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(countFours(20));
+console.log(countFours(7));
+console.log(countFours(3));
+// console.log(countFours(20));
+// TEST 1:  countFours(20)  ->  5
+// TEST 2:  countFours(7)   ->  1
+// TEST 3:  countFours(3)   ->  0
+
+// ----- 3. Factorial -----
+// Write `factorial(n)` that RETURNS 1 * 2 * ... * n.
+// your code here
+function factorial(n) {
+  let urjihsaw = 1;
+  for (let i = 1; i <= n; i++) {
+    urjihsaw = urjihsaw * i;
+  }
+  return urjihsaw;
+}
+console.log(factorial(5));
+console.log(factorial(3));
+console.log(factorial(1));
+// console.log(factorial(5));
+// TEST 1:  factorial(5)  ->  120
+// TEST 2:  factorial(3)  ->  6
+// TEST 3:  factorial(1)  ->  1
+
+// ----- 4. Power without ** -----
+// Write `power(base, exp)` that RETURNS base multiplied by itself exp times,
+// using a loop. (power(2,3) = 8.) exp is 0 or more; exp 0 -> 1.
+// your code here
+function power(base, exp) {
+  let mulit = 1;
+  for (let i = 0; i < exp; i++) {
+    mulit = mulit * base;
+  }
+  return mulit;
+}
+console.log(power(2, 3));
+console.log(power(5, 2));
+console.log(power(7, 0));
+// console.log(power(2, 3));
+// TEST 1:  power(2, 3)   ->  8
+// TEST 2:  power(5, 2)   ->  25
+// TEST 3:  power(7, 0)   ->  1
+
+// ----- 5. Count the digits -----
+// Write `digitCount(n)` (n >= 0) that RETURNS how many digits n has,
+// using Math.floor(n / 10) in a loop.
+// your code here
+function digitCount(n) {
+  if (n === 0) {
+    return 1;
+  }
+  let digit = 0;
+  while (n > 0) {
+    n = Math.floor(n / 10);
+    digit++;
+  }
+  return digit;
+}
+console.log(digitCount(7384));
+console.log(digitCount(50));
+console.log(digitCount(0));
+// console.log(digitCount(7384));
+// TEST 1:  digitCount(7384)  ->  4
+// TEST 2:  digitCount(50)    ->  2
+// TEST 3:  digitCount(0)     ->  1
+
+// ----- 6. Sum of digits -----
+// Write `digitSum(n)` that RETURNS the sum of n's digits.
+// your code here
+function digitSum(n) {
+  let sum = 0;
+  while (n > 0) {
+    sum += n % 10;
+    n = Math.floor(n / 10);
+  }
+  return sum;
+}
+console.log(digitSum(1234));
+console.log(digitSum(999));
+console.log(digitSum(5));
+// console.log(digitSum(1234));
+// TEST 1:  digitSum(1234)  ->  10
+// TEST 2:  digitSum(999)   ->  27
+// TEST 3:  digitSum(5)     ->  5
+
+// ----- 7. Count a letter -----
+// Write `countLetter(text, letter)` that RETURNS how many times letter
+// appears in text.
+// your code here
+function countLetter(text, letter) {
+  let count = 0;
+  for (let i = 1; i < text.length; i++) {
+    if (text[i] === letter) {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(countLetter("banana", "a"));
+console.log(countLetter("hello", "l"));
+console.log(countLetter("dog", "z"));
+// console.log(countLetter("banana", "a"));
+// TEST 1:  countLetter("banana", "a")  ->  3
+// TEST 2:  countLetter("hello", "l")   ->  2
+// TEST 3:  countLetter("dog", "z")     ->  0
+
+// ----- 8. Reverse a string -----
+// Write `reverse(text)` that RETURNS text backwards, building it in a loop.
+// your code here
+function reverse(text) {
+  let reversed = "";
+  for (let i = text.length - 1; i >= 0; i--) {
+    reversed = reversed + text[i];
+  }
+  return reversed;
+}
+console.log(reverse("code"));
+console.log(reverse("abc"));
+console.log(reverse("x"));
+// console.log(reverse("code"));
+// TEST 1:  reverse("code")  ->  "edoc"
+// TEST 2:  reverse("abc")   ->  "cba"
+// TEST 3:  reverse("x")     ->  "x"
+
+// ----- 9. Count vowels -----
+// Write `countVowels(text)` that RETURNS how many vowels (a,e,i,o,u) are in text.
+// your code here
+function countVowels(text) {
+  let count = 0;
+  let vowels = "aeiou";
+  let lowerText = text.toLowerCase();
+  for (let i = 0; i < lowerText.length; i++) {
+    if (vowels.includes(lowerText[i])) {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(countVowels("javascript"));
+console.log(countVowels("aeiou"));
+console.log(countVowels("xyz"));
+// console.log(countVowels("javascript"));
+// TEST 1:  countVowels("javascript")  ->  3
+// TEST 2:  countVowels("aeiou")       ->  5
+// TEST 3:  countVowels("xyz")         ->  0
+
+// ----- 10. Is it prime? -----
+// Write `isPrime(n)` (n >= 2) that RETURNS true when n has no divisor
+// between 2 and n-1.
+// your code here
+function isPrime(n) {
+  if (n < 2) {
+    return false;
+  }
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+console.log(isPrime(13));
+console.log(isPrime(15));
+console.log(isPrime(2));
+// console.log(isPrime(13));
+// TEST 1:  isPrime(13)  ->  true
+// TEST 2:  isPrime(15)  ->  false
+// TEST 3:  isPrime(2)   ->  true
+
+// ----- 11. Steps to zero -----
+// Write `stepsToZero(n)`. While n > 0: if even, halve it; if odd, subtract 1.
+// RETURN the number of steps to reach 0.
+// your code here
+function stepsToZero(n) {
+  let steps = 0;
+  while (n > 0) {
+    if (n % 2 === 0) {
+      n = n / 2;
+    } else {
+      n = n - 1;
+    }
+    steps++;
+  }
+  return steps;
+}
+console.log(stepsToZero(14));
+console.log(stepsToZero(8));
+console.log(stepsToZero(1));
+// console.log(stepsToZero(14));
+// TEST 1:  stepsToZero(14)  ->  6
+// TEST 2:  stepsToZero(8)   ->  4
+// TEST 3:  stepsToZero(1)   ->  1
+
+// ----- 12. Number palindrome -----
+// Write `isNumPalindrome(n)` (n >= 0) that RETURNS true when n reads the same
+// forwards and backwards. Build the reverse with a loop, then compare.
+// your code here
+function isNumPalindrome(n) {
+  if (n < 10){
+    return true;}
+  
+  let original = n;
+  let reversedtwo = 0;
+  while (n > 0) {
+    let lastDigit = n % 10;
+    reversedtwo = reversedtwo * 10 + lastDigit;
+    n = Math.floor(n / 10);
+  }
+  return original === reversedtwo;
+}
+console.log(isNumPalindrome(121));
+console.log(isNumPalindrome(123));
+// console.log(isNumPalindrome(121));
+// TEST 1:  isNumPalindrome(121)  ->  true
+// TEST 2:  isNumPalindrome(123)  ->  false
+/* ============================================================
+   LESSON 7 â€” FUNCTIONS: FRESH EXERCISES
+   ------------------------------------------------------------
+   Focus: parameters, return, default values, and CALLING one
+   function from inside another (composition). Tools: everything
+   from lessons 1-6. NO arrays.
+
+   Run:  node 7-functions.js
+   Each exercise: 3 TEST CASES, INPUT -> EXACT RETURN value.
+   ============================================================ */
+
+// ----- 1. Add three -----
+// Write `addThree(a, b, c)` that RETURNS the sum of all three.
+// your code here
+function addThree(a, b, c){
+let sum = 0;
+return a + b + c
+}
+console.log(addThree(1, 2, 3));
+console.log(addThree(10, 0, 5));
+console.log(addThree(-1, 1, 0));
+// console.log(addThree(1, 2, 3));
+// TEST 1:  addThree(1, 2, 3)   ->  6
+// TEST 2:  addThree(10, 0, 5)  ->  15
+// TEST 3:  addThree(-1, 1, 0)  ->  0
+
+// ----- 2. Greet with default -----
+// Write `greet(name)` that RETURNS "Hello, " + name. If name is not given,
+// default it to "friend". (Use a default parameter.)
+// your code here
+function greet(name = "friend"){
+return "Hello, + " + name;
+
+}
+console.log(greet("Sam"));
+console.log(greet());
+console.log(greet("Ada"));
+// console.log(greet("Sam"));
+// TEST 1:  greet("Sam")  ->  "Hello, Sam"
+// TEST 2:  greet()       ->  "Hello, friend"
+// TEST 3:  greet("Ada")  ->  "Hello, Ada"
+
+// ----- 3. Max of two -----
+// Write `maxTwo(a, b)` that RETURNS the larger of the two.
+// your code here
+function maxTwo(a, b){
+return Math.max(a,b)
+}
+console.log(maxTwo(3, 9));
+console.log(maxTwo(10, 2));
+console.log(maxTwo(5, 5));
+// console.log(maxTwo(3, 9));
+// TEST 1:  maxTwo(3, 9)    ->  9
+// TEST 2:  maxTwo(10, 2)   ->  10
+// TEST 3:  maxTwo(5, 5)    ->  5
+
+// ----- 4. Max of three (compose #3) -----
+// Write `maxThree(a, b, c)` that RETURNS the largest, by CALLING maxTwo twice.
+// your code here
+function maxThree(a, b, c){
+return Math.max(a, b, c)
+}
+console.log(maxThree(3, 9, 5));
+console.log(maxThree(8, 2, 4));
+console.log(maxThree(1, 1, 7));
+// console.log(maxThree(3, 9, 5));
+// TEST 1:  maxThree(3, 9, 5)    ->  9
+// TEST 2:  maxThree(8, 2, 4)    ->  8
+// TEST 3:  maxThree(1, 1, 7)    ->  7
+
+// ----- 5. Is even (helper) -----
+// Write `even(n)` that RETURNS true when n is even.
+// your code here
+function even(n){
+return n % 2 === 0;
+}
+console.log(even(4));
+console.log(even(7));
+console.log(even(0));
+// console.log(even(4));
+// TEST 1:  even(4)  ->  true
+// TEST 2:  even(7)  ->  false
+// TEST 3:  even(0)  ->  true
+
+// ----- 6. Label parity (compose #5) -----
+// Write `parityLabel(n)` that RETURNS "even" or "odd" by CALLING even(n).
+// your code here
+function parityLabel(n){
+return n % 2 === 0 ? "even" : "odd";
+}
+console.log(parityLabel(7));
+console.log(parityLabel(4));
+console.log(parityLabel(0));
+// console.log(parityLabel(7));
+// TEST 1:  parityLabel(7)  ->  "odd"
+// TEST 2:  parityLabel(4)  ->  "even"
+// TEST 3:  parityLabel(0)  ->  "even"
+
+// ----- 7. Rectangle area -----
+// Write `area(w, h)` that RETURNS w * h.
+// your code here
+function area(w, h){
+return w * h;
+}
+console.log(area(3, 4));
+console.log(area(5, 5));
+console.log(area(3, 3));
+// console.log(area(3, 4));
+// TEST 1:  area(3, 4)  ->  12
+// TEST 2:  area(5, 5)  ->  25
+// TEST 3:  area(1, 9)  ->  9
+
+// ----- 8. Total cost (compose #7) -----
+// Write `tileCost(w, h, pricePerTile)` that RETURNS area(w, h) * pricePerTile.
+// your code here
+function tileCost(w, h, pricePerTile){
+return ((w * h)* pricePerTile);
+}
+console.log(tileCost(2, 3, 5));
+console.log(tileCost(4, 4, 2));
+console.log(tileCost(1, 1, 10));
+// console.log(tileCost(2, 3, 5));
+// TEST 1:  tileCost(2, 3, 5)   ->  30
+// TEST 2:  tileCost(4, 4, 2)   ->  32
+// TEST 3:  tileCost(1, 1, 10)  ->  10
+
+// ----- 9. Clamp -----
+// Write `clamp(n, low, high)` that RETURNS low if n < low, high if n > high,
+// otherwise n.
+// your code here
+function clamp(n, low, high){
+return n < low ? low : n > high ? high : n; 
+}
+console.log(clamp(15, 0, 10));
+console.log(clamp(-3, 0, 10));
+console.log(clamp(5, 0, 10));
+// console.log(clamp(15, 0, 10));
+// TEST 1:  clamp(15, 0, 10)  ->  10
+// TEST 2:  clamp(-3, 0, 10)  ->  0
+// TEST 3:  clamp(5, 0, 10)   ->  5
+
+// ----- 10. Count down to string -----
+// Write `countdown(n)` that RETURNS a string of n down to 1 joined by spaces,
+// using a loop inside the function. countdown(3) -> "3 2 1".
+// your code here
+function countdown(n){
+  let result = "";
+for(let i = n; i >= 1; i--){result = result + i;
+  if(i > 1) {result = result + " ";}
+}
+return result;
+}
+console.log(countdown(3));
+console.log(countdown(5));
+console.log(countdown(1));
+// console.log(countdown(3));
+// TEST 1:  countdown(3)  ->  "3 2 1"
+// TEST 2:  countdown(5)  ->  "5 4 3 2 1"
+// TEST 3:  countdown(1)  ->  "1"
+/* ============================================================
+   LESSON 8 â€” OBJECTS: FRESH EXERCISES
+   ------------------------------------------------------------
+   Tools: obj.key / obj[key], "key" in obj, delete, for..in,
+   Object.keys / Object.values, { ...spread }. Plus everything before.
+
+   Run:  node 8-objects.js
+   Comparing objects: two objects are never === even when equal.
+   To check in code, compare JSON.stringify(yours) to the expected.
+   Each exercise: 3 TEST CASES, INPUT -> EXACT RETURN value.
+   ============================================================ */
+
+// ----- 1. Make a book -----
+// Write `makeBook()` (no input) that RETURNS { title: "Dune", pages: 412 }.
+// your code here
+function makeBook(){
+return { title: "Dune", pages: 412 }
+}
+console.log(makeBook().title);
+console.log(makeBook().pages);
+console.log(typeof makeBook());
+// console.log(makeBook());
+// TEST 1:  makeBook().title       ->  "Dune"
+// TEST 2:  makeBook().pages       ->  412
+// TEST 3:  typeof makeBook()      ->  "object"
+
+// ----- 2. Read a key -----
+// Write `getTitle(book)` that RETURNS the title property.
+// your code here
+function getTitle(book){
+return book.title
+}
+console.log(getTitle({ title: "1984", pages: 328 }));
+console.log(getTitle({ title: "It" }));
+console.log(getTitle({ title: "" }));
+// console.log(getTitle({ title: "1984", pages: 328 }));
+// TEST 1:  getTitle({ title: "1984", pages: 328 })  ->  "1984"
+// TEST 2:  getTitle({ title: "It" })                ->  "It"
+// TEST 3:  getTitle({ title: "" })                  ->  ""
+
+// ----- 3. Read by variable key -----
+// Write `field(obj, key)` that RETURNS the value behind key (use brackets).
+// your code here
+function field(obj, key){
+return obj[key];
+}
+console.log(field({ a: 1, b: 2 }, "b"));
+console.log(field({ city: "NYC"}, "city"));
+console.log(field({ a: 1}, "missing"));
+// console.log(field({ a: 1, b: 2 }, "b"));
+// TEST 1:  field({ a: 1, b: 2 }, "b")        ->  2
+// TEST 2:  field({ city: "NYC" }, "city")    ->  "NYC"
+// TEST 3:  field({ a: 1 }, "missing")        ->  undefined
+
+// ----- 4. Set a price (mutate) -----
+// Write `setPrice(item, price)` that sets item.price = price and RETURNS item.
+// your code here
+function setPrice(item, price){
+item.price = price;
+return item;
+}
+console.log(setPrice({ name: "pen" }, 3).price);
+console.log(setPrice({ price: 1 }, 9).price);
+console.log(setPrice({ name: "x" }, 0).price);
+// console.log(setPrice({ name: "pen" }, 3));
+// TEST 1:  setPrice({ name: "pen" }, 3).price  ->  3
+// TEST 2:  setPrice({ price: 1 }, 9).price     ->  9
+// TEST 3:  setPrice({ name: "x" }, 0).price    ->  0
+
+// ----- 5. Has key? -----
+// Write `hasKey(obj, key)` that RETURNS true when key exists in obj.
+// your code here
+function haskey(obj, key){
+return key in obj;
+}
+console.log(haskey({a: 1}, "a"));
+console.log(haskey({a: 1}, "b"));
+console.log(haskey({name: "x"}, "name"));
+// console.log(hasKey({ a: 1 }, "a"));
+// TEST 1:  hasKey({ a: 1 }, "a")        ->  true
+// TEST 2:  hasKey({ a: 1 }, "b")        ->  false
+// TEST 3:  hasKey({ name: "x" }, "name") ->  true
+
+// ----- 6. Remove a key (mutate) -----
+// Write `removeKey(obj, key)` that deletes key from obj and RETURNS obj.
+// your code here
+function removeKey(obj, key){
+delete obj[key];
+return obj;
+}
+let obj1 = {a: 1, b: 2};
+console.log(removeKey({ obj1, b: 2 }, "b"));
+// console.log(removeKey({ a: 1, b: 2 }, "b"));
+// TEST 1:  "b" in removeKey({ a: 1, b: 2 }, "b")  ->  false
+// TEST 2:  "a" in removeKey({ a: 1, b: 2 }, "b")  ->  true
+// TEST 3:  removeKey({ x: 9 }, "x").x             ->  undefined
+
+// ----- 7. Count the keys -----
+// Write `keyCount(obj)` that RETURNS how many keys obj has.
+// your code here
+
+// console.log(keyCount({ a: 1, b: 2, c: 3 }));
+// TEST 1:  keyCount({ a: 1, b: 2, c: 3 })  ->  3
+// TEST 2:  keyCount({})                    ->  0
+// TEST 3:  keyCount({ only: true })        ->  1
+
+// ----- 8. Sum the values -----
+// Write `sumValues(obj)` (all values are numbers) that RETURNS their total.
+// your code here
+
+// console.log(sumValues({ a: 1, b: 2, c: 3 }));
+// TEST 1:  sumValues({ a: 1, b: 2, c: 3 })  ->  6
+// TEST 2:  sumValues({ x: 10, y: 5 })       ->  15
+// TEST 3:  sumValues({ only: 7 })           ->  7
+
+// ----- 9. Merge two objects (copy) -----
+// Write `merge(a, b)` that RETURNS a NEW object with both, b winning on
+// shared keys. Do not change a or b.
+// your code here
+
+// console.log(merge({ a: 1 }, { b: 2 }));
+// TEST 1:  merge({ a: 1 }, { b: 2 }).b         ->  2
+// TEST 2:  merge({ a: 1 }, { a: 9 }).a         ->  9
+// TEST 3:  keyCount(merge({ a: 1 }, { b: 2 })) ->  2
+
+// ----- 10. Highest value key -----
+// Write `topKey(scores)` (values are numbers) that RETURNS the key with the
+// biggest value.
+// your code here
+
+// console.log(topKey({ sam: 5, ada: 9, bo: 3 }));
+// TEST 1:  topKey({ sam: 5, ada: 9, bo: 3 })  ->  "ada"
+// TEST 2:  topKey({ a: 1, b: 2 })             ->  "b"
+// TEST 3:  topKey({ only: 7 })                ->  "only"
