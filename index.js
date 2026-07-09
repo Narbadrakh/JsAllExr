@@ -1098,9 +1098,10 @@ console.log(stepsToZero(1));
 // forwards and backwards. Build the reverse with a loop, then compare.
 // your code here
 function isNumPalindrome(n) {
-  if (n < 10){
-    return true;}
-  
+  if (n < 10) {
+    return true;
+  }
+
   let original = n;
   let reversedtwo = 0;
   while (n > 0) {
@@ -1129,9 +1130,9 @@ console.log(isNumPalindrome(123));
 // ----- 1. Add three -----
 // Write `addThree(a, b, c)` that RETURNS the sum of all three.
 // your code here
-function addThree(a, b, c){
-let sum = 0;
-return a + b + c
+function addThree(a, b, c) {
+  let sum = 0;
+  return a + b + c;
 }
 console.log(addThree(1, 2, 3));
 console.log(addThree(10, 0, 5));
@@ -1145,9 +1146,8 @@ console.log(addThree(-1, 1, 0));
 // Write `greet(name)` that RETURNS "Hello, " + name. If name is not given,
 // default it to "friend". (Use a default parameter.)
 // your code here
-function greet(name = "friend"){
-return "Hello, + " + name;
-
+function greet(name = "friend") {
+  return "Hello, + " + name;
 }
 console.log(greet("Sam"));
 console.log(greet());
@@ -1160,8 +1160,8 @@ console.log(greet("Ada"));
 // ----- 3. Max of two -----
 // Write `maxTwo(a, b)` that RETURNS the larger of the two.
 // your code here
-function maxTwo(a, b){
-return Math.max(a,b)
+function maxTwo(a, b) {
+  return Math.max(a, b);
 }
 console.log(maxTwo(3, 9));
 console.log(maxTwo(10, 2));
@@ -1174,8 +1174,8 @@ console.log(maxTwo(5, 5));
 // ----- 4. Max of three (compose #3) -----
 // Write `maxThree(a, b, c)` that RETURNS the largest, by CALLING maxTwo twice.
 // your code here
-function maxThree(a, b, c){
-return Math.max(a, b, c)
+function maxThree(a, b, c) {
+  return Math.max(a, b, c);
 }
 console.log(maxThree(3, 9, 5));
 console.log(maxThree(8, 2, 4));
@@ -1188,8 +1188,8 @@ console.log(maxThree(1, 1, 7));
 // ----- 5. Is even (helper) -----
 // Write `even(n)` that RETURNS true when n is even.
 // your code here
-function even(n){
-return n % 2 === 0;
+function even(n) {
+  return n % 2 === 0;
 }
 console.log(even(4));
 console.log(even(7));
@@ -1202,8 +1202,8 @@ console.log(even(0));
 // ----- 6. Label parity (compose #5) -----
 // Write `parityLabel(n)` that RETURNS "even" or "odd" by CALLING even(n).
 // your code here
-function parityLabel(n){
-return n % 2 === 0 ? "even" : "odd";
+function parityLabel(n) {
+  return n % 2 === 0 ? "even" : "odd";
 }
 console.log(parityLabel(7));
 console.log(parityLabel(4));
@@ -1216,8 +1216,8 @@ console.log(parityLabel(0));
 // ----- 7. Rectangle area -----
 // Write `area(w, h)` that RETURNS w * h.
 // your code here
-function area(w, h){
-return w * h;
+function area(w, h) {
+  return w * h;
 }
 console.log(area(3, 4));
 console.log(area(5, 5));
@@ -1230,8 +1230,8 @@ console.log(area(3, 3));
 // ----- 8. Total cost (compose #7) -----
 // Write `tileCost(w, h, pricePerTile)` that RETURNS area(w, h) * pricePerTile.
 // your code here
-function tileCost(w, h, pricePerTile){
-return ((w * h)* pricePerTile);
+function tileCost(w, h, pricePerTile) {
+  return w * h * pricePerTile;
 }
 console.log(tileCost(2, 3, 5));
 console.log(tileCost(4, 4, 2));
@@ -1245,8 +1245,8 @@ console.log(tileCost(1, 1, 10));
 // Write `clamp(n, low, high)` that RETURNS low if n < low, high if n > high,
 // otherwise n.
 // your code here
-function clamp(n, low, high){
-return n < low ? low : n > high ? high : n; 
+function clamp(n, low, high) {
+  return n < low ? low : n > high ? high : n;
 }
 console.log(clamp(15, 0, 10));
 console.log(clamp(-3, 0, 10));
@@ -1260,12 +1260,15 @@ console.log(clamp(5, 0, 10));
 // Write `countdown(n)` that RETURNS a string of n down to 1 joined by spaces,
 // using a loop inside the function. countdown(3) -> "3 2 1".
 // your code here
-function countdown(n){
+function countdown(n) {
   let result = "";
-for(let i = n; i >= 1; i--){result = result + i;
-  if(i > 1) {result = result + " ";}
-}
-return result;
+  for (let i = n; i >= 1; i--) {
+    result = result + i;
+    if (i > 1) {
+      result = result + " ";
+    }
+  }
+  return result;
 }
 console.log(countdown(3));
 console.log(countdown(5));
@@ -1289,8 +1292,8 @@ console.log(countdown(1));
 // ----- 1. Make a book -----
 // Write `makeBook()` (no input) that RETURNS { title: "Dune", pages: 412 }.
 // your code here
-function makeBook(){
-return { title: "Dune", pages: 412 }
+function makeBook() {
+  return { title: "Dune", pages: 412 };
 }
 console.log(makeBook().title);
 console.log(makeBook().pages);
@@ -1303,8 +1306,8 @@ console.log(typeof makeBook());
 // ----- 2. Read a key -----
 // Write `getTitle(book)` that RETURNS the title property.
 // your code here
-function getTitle(book){
-return book.title
+function getTitle(book) {
+  return book.title;
 }
 console.log(getTitle({ title: "1984", pages: 328 }));
 console.log(getTitle({ title: "It" }));
@@ -1317,12 +1320,12 @@ console.log(getTitle({ title: "" }));
 // ----- 3. Read by variable key -----
 // Write `field(obj, key)` that RETURNS the value behind key (use brackets).
 // your code here
-function field(obj, key){
-return obj[key];
+function field(obj, key) {
+  return obj[key];
 }
 console.log(field({ a: 1, b: 2 }, "b"));
-console.log(field({ city: "NYC"}, "city"));
-console.log(field({ a: 1}, "missing"));
+console.log(field({ city: "NYC" }, "city"));
+console.log(field({ a: 1 }, "missing"));
 // console.log(field({ a: 1, b: 2 }, "b"));
 // TEST 1:  field({ a: 1, b: 2 }, "b")        ->  2
 // TEST 2:  field({ city: "NYC" }, "city")    ->  "NYC"
@@ -1331,9 +1334,9 @@ console.log(field({ a: 1}, "missing"));
 // ----- 4. Set a price (mutate) -----
 // Write `setPrice(item, price)` that sets item.price = price and RETURNS item.
 // your code here
-function setPrice(item, price){
-item.price = price;
-return item;
+function setPrice(item, price) {
+  item.price = price;
+  return item;
 }
 console.log(setPrice({ name: "pen" }, 3).price);
 console.log(setPrice({ price: 1 }, 9).price);
@@ -1346,12 +1349,12 @@ console.log(setPrice({ name: "x" }, 0).price);
 // ----- 5. Has key? -----
 // Write `hasKey(obj, key)` that RETURNS true when key exists in obj.
 // your code here
-function haskey(obj, key){
-return key in obj;
+function haskey(obj, key) {
+  return key in obj;
 }
-console.log(haskey({a: 1}, "a"));
-console.log(haskey({a: 1}, "b"));
-console.log(haskey({name: "x"}, "name"));
+console.log(haskey({ a: 1 }, "a"));
+console.log(haskey({ a: 1 }, "b"));
+console.log(haskey({ name: "x" }, "name"));
 // console.log(hasKey({ a: 1 }, "a"));
 // TEST 1:  hasKey({ a: 1 }, "a")        ->  true
 // TEST 2:  hasKey({ a: 1 }, "b")        ->  false
@@ -1360,12 +1363,13 @@ console.log(haskey({name: "x"}, "name"));
 // ----- 6. Remove a key (mutate) -----
 // Write `removeKey(obj, key)` that deletes key from obj and RETURNS obj.
 // your code here
-function removeKey(obj, key){
-delete obj[key];
-return obj;
+function removeKey(obj, key) {
+  delete obj[key];
+  return key in obj;
 }
-let obj1 = {a: 1, b: 2};
-console.log(removeKey({ obj1, b: 2 }, "b"));
+console.log(removeKey({ a: 1, b: 2 }, "b"));
+console.log(removeKey({ a: 1, b: 2 }, "b"));
+console.log(removeKey({ x: 9 }, "x").x);
 // console.log(removeKey({ a: 1, b: 2 }, "b"));
 // TEST 1:  "b" in removeKey({ a: 1, b: 2 }, "b")  ->  false
 // TEST 2:  "a" in removeKey({ a: 1, b: 2 }, "b")  ->  true
@@ -1374,7 +1378,12 @@ console.log(removeKey({ obj1, b: 2 }, "b"));
 // ----- 7. Count the keys -----
 // Write `keyCount(obj)` that RETURNS how many keys obj has.
 // your code here
-
+function keyCount(obj) {
+  return Object.keys(obj).length;
+}
+console.log(keyCount({ a: 1, b: 2, c: 3 }));
+console.log(keyCount({}));
+console.log(keyCount({ only: true }));
 // console.log(keyCount({ a: 1, b: 2, c: 3 }));
 // TEST 1:  keyCount({ a: 1, b: 2, c: 3 })  ->  3
 // TEST 2:  keyCount({})                    ->  0
@@ -1383,7 +1392,16 @@ console.log(removeKey({ obj1, b: 2 }, "b"));
 // ----- 8. Sum the values -----
 // Write `sumValues(obj)` (all values are numbers) that RETURNS their total.
 // your code here
-
+function sumValues(obj) {
+  let sum = 0;
+  for (let key in obj) {
+    sum = sum + obj[key];
+  }
+  return sum;
+}
+console.log(sumValues({ a: 1, b: 2, c: 3 }));
+console.log(sumValues({ x: 10, y: 5 }));
+console.log(sumValues({ only: 7 }));
 // console.log(sumValues({ a: 1, b: 2, c: 3 }));
 // TEST 1:  sumValues({ a: 1, b: 2, c: 3 })  ->  6
 // TEST 2:  sumValues({ x: 10, y: 5 })       ->  15
@@ -1394,7 +1412,12 @@ console.log(removeKey({ obj1, b: 2 }, "b"));
 // shared keys. Do not change a or b.
 // your code here
 
-// console.log(merge({ a: 1 }, { b: 2 }));
+function merge(a, b) {
+  return { ...a, ...b };
+}
+console.log(merge({ a: 1 }, { b: 2 }).b);
+console.log(merge({ a: 1 }, { a: 9 }).a);
+console.log(keyCount(merge({ a: 1 }, { b: 2 })));
 // TEST 1:  merge({ a: 1 }, { b: 2 }).b         ->  2
 // TEST 2:  merge({ a: 1 }, { a: 9 }).a         ->  9
 // TEST 3:  keyCount(merge({ a: 1 }, { b: 2 })) ->  2
@@ -1403,8 +1426,201 @@ console.log(removeKey({ obj1, b: 2 }, "b"));
 // Write `topKey(scores)` (values are numbers) that RETURNS the key with the
 // biggest value.
 // your code here
+function topKey(scores){
+let bestScore = "";
+let bestValue = -Infinity;
+for(let key in scores){
+if(scores[key] > bestValue) {bestValue = scores[key];bestScore = key;}
+}
+return  bestScore;
+}
+console.log(topKey({ sam: 5, ada: 9, bo: 3 }));
+console.log(topKey({ a: 1, b: 2  }));
+console.log(topKey({ only: 7 }));
 
 // console.log(topKey({ sam: 5, ada: 9, bo: 3 }));
 // TEST 1:  topKey({ sam: 5, ada: 9, bo: 3 })  ->  "ada"
 // TEST 2:  topKey({ a: 1, b: 2 })             ->  "b"
 // TEST 3:  topKey({ only: 7 })                ->  "only"
+/* ============================================================
+   LESSON 9 â€” ARRAYS: FRESH EXERCISES
+   ------------------------------------------------------------
+   Tools: [ ], arr[i], arr.length, push/pop/unshift/shift,
+   includes/indexOf, and a for loop over the items. Plus before.
+
+   Run:  node 9-arrays.js
+   Comparing arrays by eye: the test shows the expected list.
+   To check in code, compare JSON.stringify(yours) to expected.
+   Each exercise: 3 TEST CASES, INPUT -> EXACT RETURN value.
+   ============================================================ */
+
+// ----- 1. First item -----
+// Write `firstItem(arr)` that RETURNS the item at index 0.
+// your code here
+function firstItem(arr){
+return arr[0];
+}
+console.log(firstItem([10, 20, 30]));
+console.log(firstItem(["a", "b"]));
+console.log(firstItem([7]));
+// console.log(firstItem([10, 20, 30]));
+// TEST 1:  firstItem([10, 20, 30])  ->  10
+// TEST 2:  firstItem(["a", "b"])    ->  "a"
+// TEST 3:  firstItem([7])           ->  7
+
+// ----- 2. Sum all -----
+// Write `sumAll(arr)` (numbers) that RETURNS the total of every item.
+// your code here
+function sumAll(arr){
+return arr.reduce((sum, num) => sum + num, 0);
+}
+console.log(sumAll([1, 2, 3, 4]));
+console.log(sumAll([]));
+console.log(sumAll([5]));
+// console.log(sumAll([1, 2, 3, 4]));
+// TEST 1:  sumAll([1, 2, 3, 4])  ->  10
+// TEST 2:  sumAll([])            ->  0
+// TEST 3:  sumAll([5])           ->  5
+
+// ----- 3. Biggest number -----
+// Write `maxOf(arr)` (numbers) that RETURNS the largest item.
+// your code here
+function maxOf(arr){
+if(arr.length === 0){return 0;}
+return arr.reduce((max, num) => num > max ? num : max, arr[0])
+}
+console.log(maxOf([3, 9, 5]));
+console.log(maxOf([-1, -5, -2]));
+console.log(maxOf([7]));
+// console.log(maxOf([3, 9, 5]));
+// TEST 1:  maxOf([3, 9, 5])      ->  9
+// TEST 2:  maxOf([-1, -5, -2])   ->  -1
+// TEST 3:  maxOf([7])            ->  7
+
+// ----- 4. Count occurrences -----
+// Write `countOf(arr, target)` that RETURNS how many items equal target.
+// your code here
+function countOf(arr, target){
+return arr.filter(item => item === target).length;
+}
+console.log(countOf([1, 2, 2, 3, 2], 2));
+console.log(countOf(["a", "b", "a"], "a"));
+console.log(countOf([1, 2, 3], 9));
+
+// console.log(countOf([1, 2, 2, 3, 2], 2));
+// TEST 1:  countOf([1, 2, 2, 3, 2], 2)        ->  3
+// TEST 2:  countOf(["a", "b", "a"], "a")      ->  2
+// TEST 3:  countOf([1, 2, 3], 9)              ->  0
+
+// ----- 5. Add to end -----
+// Write `append(arr, item)` that pushes item and RETURNS arr.
+// your code here
+function append(arr, item){
+arr.push(item);
+return arr;
+}
+console.log(append([1, 2], 3));
+console.log(append([], "hi").length);
+console.log(append(["a"], "b"));
+// console.log(append([1, 2], 3));
+// TEST 1:  append([1, 2], 3)          ->  [1, 2, 3]
+// TEST 2:  append([], "hi").length    ->  1
+// TEST 3:  append(["a"], "b")         ->  ["a", "b"]
+
+// ----- 6. Remove first -----
+// Write `removeFirst(arr)` that shifts off the first item and RETURNS arr.
+// your code here
+function removeFirst(arr){
+arr.shift();
+return arr;
+}
+console.log(removeFirst([1, 2, 3]));
+console.log(removeFirst([9]).length);
+console.log(removeFirst(["a", "b", "c"]));
+// console.log(removeFirst([1, 2, 3]));
+// TEST 1:  removeFirst([1, 2, 3])        ->  [2, 3]
+// TEST 2:  removeFirst([9]).length       ->  0
+// TEST 3:  removeFirst(["a", "b", "c"])  ->  ["b", "c"]
+
+// ----- 7. Contains -----
+// Write `contains(arr, item)` that RETURNS true when item is in arr.
+// your code here
+function contains(arr, item){
+return arr.some(ele => ele === item);
+}
+console.log(contains(["cat", "dog"], "dog"));
+console.log(contains([1, 2, 3], 9));
+console.log(contains([], "x"));
+// console.log(contains(["cat", "dog"], "dog"));
+// TEST 1:  contains(["cat", "dog"], "dog")   ->  true
+// TEST 2:  contains([1, 2, 3], 9)            ->  false
+// TEST 3:  contains([], "x")                 ->  false
+
+// ----- 8. Count even numbers -----
+// Write `countEven(arr)` (numbers) that RETURNS how many items are even.
+// your code here
+function countEven(arr){
+return arr.filter(num => num % 2 ===0 ).length;
+}
+console.log(countEven([1, 2, 3, 4, 6]));
+console.log(countEven([1, 3, 5,]));
+console.log(countEven([2, 4]));
+// console.log(countEven([1, 2, 3, 4, 6]));
+// TEST 1:  countEven([1, 2, 3, 4, 6])  ->  3
+// TEST 2:  countEven([1, 3, 5])        ->  0
+// TEST 3:  countEven([2, 4])           ->  2
+
+// ----- 9. Join with dashes -----
+// Write `dashJoin(arr)` that RETURNS the items joined into one string with
+// "-" between them, built with a loop. dashJoin(["a","b","c"]) -> "a-b-c".
+// your code here
+function dashJoin(arr){
+return arr.join("-");
+}
+console.log(dashJoin(["a", "b", "c"]));
+console.log(dashJoin(["one"]));
+console.log(dashJoin([1, 2]));
+// console.log(dashJoin(["a", "b", "c"]));
+// TEST 1:  dashJoin(["a", "b", "c"])  ->  "a-b-c"
+// TEST 2:  dashJoin(["one"])          ->  "one"
+// TEST 3:  dashJoin([1, 2])           ->  "1-2"
+
+// ----- 10. Average -----
+// Write `average(arr)` (numbers) that RETURNS the mean of the items.
+// your code here
+function average(arr){
+let sum = 0;
+   for (let i = 0; i < arr.length; i++) {
+      sum = sum + arr[i];
+   }
+   return sum / arr.length;
+}
+console.log(average([2, 4, 6]));
+console.log(average([10, 20]));
+console.log(average([5]));
+// console.log(average([2, 4, 6]));
+// TEST 1:  average([2, 4, 6])    ->  4
+// TEST 2:  average([10, 20])     ->  15
+// TEST 3:  average([5])          ->  5
+
+// ----- 11. Reverse into a new array -----
+// Write `reverseArr(arr)` that RETURNS a NEW array with the items reversed.
+// Do not change the original.
+// your code here
+function reverseArr(arr){
+
+}
+// console.log(reverseArr([1, 2, 3]));
+// TEST 1:  reverseArr([1, 2, 3])        ->  [3, 2, 1]
+// TEST 2:  reverseArr(["a", "b"])       ->  ["b", "a"]
+// TEST 3:  reverseArr([7])              ->  [7]
+
+// ----- 12. Only the evens (build a new array) -----
+// Write `evensOnly(arr)` that RETURNS a NEW array with only the even numbers,
+// in the same order.
+// your code here
+
+// console.log(evensOnly([1, 2, 3, 4, 5, 6]));
+// TEST 1:  evensOnly([1, 2, 3, 4, 5, 6])  ->  [2, 4, 6]
+// TEST 2:  evensOnly([1, 3, 5])           ->  []
+// TEST 3:  evensOnly([2, 4])              ->  [2, 4]
